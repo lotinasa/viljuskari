@@ -5,7 +5,6 @@
   Template Name: User Profile
  */
 
-
 if ( ! is_user_logged_in() ) {
 	$redirect_to = get_permalink( TMM::get_option( 'user_login_page', TMM_APP_CARDEALER_PREFIX ) );
 	if ( TMM::get_option( 'user_profile_page', TMM_APP_CARDEALER_PREFIX ) ) {
@@ -20,7 +19,6 @@ wp_enqueue_script( 'app_carsealer_user_profiles', TMM_Ext_Car_Dealer::get_applic
 		'jquery',
 		'jquery-ui-sortable'
 	) );
-wp_enqueue_script( 'tmm_theme_map_api_js', 'https://maps.googleapis.com/maps/api/js?sensor=false' );
 
 get_header();
 $profileuser = wp_get_current_user();
@@ -233,9 +231,7 @@ $profileuser = wp_get_current_user();
 						<!-- Set Location -->
 						<p>
 							<label for="location_address"><strong><?php _e( 'Set Map Location', 'cardealer' ); ?></strong></label>
-							<input type="text" placeholder="12 Street, Los Angeles, CA, 94101"
-							       value="<?php echo $map_data['location_address'] ?>" id="location_address"
-							       name="location_address"/>
+							<input type="text" placeholder="12 Street, Los Angeles, CA, 94101" value="<?php echo $map_data['location_address'] ?>" id="location_address" name="location_address"/>
 
 							<a href="#" id="set_location" class="button orange"><?php _e( 'Set Location', 'cardealer' ); ?></a>
 						</p>
@@ -267,7 +263,7 @@ $profileuser = wp_get_current_user();
 
 						<!-- Map Zoom -->
 						<p>
-							<label for="map_zoom"><strong><?php _e( 'Map Zoom', 'cardealer' ); ?></strong></label>
+							<label for="map_zoom"><strong><?php _e( 'Zoom', 'cardealer' ); ?></strong></label>
 							<select name="map_zoom" id="map_zoom">
 								<?php for ( $i = 1; $i <= 30; $i ++ ): ?>
 									<option
@@ -282,10 +278,9 @@ $profileuser = wp_get_current_user();
 						<!-- Map Latitude -->
 						<p>
 							<label for="map_latitude">
-								<strong><?php _e( 'Map Latitude', 'cardealer' ); ?></strong>
+								<strong><?php _e( 'Latitude', 'cardealer' ); ?></strong>
 							</label>
-							<input type="text" value="<?php echo $map_data['map_latitude'] ?>" id="map_latitude"
-							       name="map_latitude"/><br/>
+							<input type="text" value="<?php echo $map_data['map_latitude'] ?>" id="map_latitude" name="map_latitude"/><br/>
 						</p>
 
 					</div>
@@ -294,10 +289,9 @@ $profileuser = wp_get_current_user();
 						<!-- Map Longitude -->
 						<p>
 							<label for="map_longitude">
-								<strong><?php _e( 'Map Longitude', 'cardealer' ); ?></strong>
+								<strong><?php _e( 'Longitude', 'cardealer' ); ?></strong>
 							</label>
-							<input type="text" value="<?php echo $map_data['map_longitude'] ?>" id="map_longitude"
-							       name="map_longitude"/><br/>
+							<input type="text" value="<?php echo $map_data['map_longitude'] ?>" id="map_longitude" name="map_longitude"/><br/>
 						</p>
 
 					</div>
@@ -317,7 +311,7 @@ $profileuser = wp_get_current_user();
 	<div class="section-options clearfix">
 
 		<div class="row">
-			<div class="col-xs-6 col-md-4">
+			<div class="col-md-12">
 
 				<?php
 				$account_emails = tmm_allow_user_email($profileuser->data->ID, 'account_emails');
@@ -348,10 +342,10 @@ $profileuser = wp_get_current_user();
 		<p id="update_user_errors" class="error" style="display: none"></p>
 
 		<p id="update_user_success" class="success" style="display: none;">
-			<strong><i><?php _e( 'Your Profile Data was updated successfully', 'cardealer' ); ?></i></strong></p>
+			<strong><i><?php _e( 'Your Profile Data was updated successfully', 'cardealer' ); ?></i></strong>
+		</p>
 
-		<input type="submit" class="button big orange" id="update_user_profile"
-		       value="<?php _e( 'Update Profile', 'cardealer' ); ?>">
+		<input type="submit" class="button big orange" id="update_user_profile" value="<?php _e( 'Update Profile', 'cardealer' ); ?>">
 
 	</div>
 	<!--/ .section-options-->
@@ -367,4 +361,3 @@ $profileuser = wp_get_current_user();
 <?php endif; ?>
 
 <?php get_footer(); ?>
-

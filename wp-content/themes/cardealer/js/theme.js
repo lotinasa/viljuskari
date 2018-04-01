@@ -692,9 +692,9 @@
 					var href = '';
 
 					if (this.href.indexOf('watch?v=') !== -1) {
-						href = this.href.replace(new RegExp("watch\\?v=", "i"), 'v/') + '&autoplay=1';
+						href = this.href.replace(new RegExp("watch\\?v=", "i"), 'embed/') + '?autoplay=1&enablejsapi=1';
 					} else {
-						href = this.href.replace(new RegExp("youtu.be/", "i"), 'www.youtube.com/v/') + '&autoplay=1';
+						href = this.href.replace(new RegExp("youtu.be/", "i"), 'www.youtube.com/embed/') + '?autoplay=1&enablejsapi=1';
 					}
 
 					$.fancybox({
@@ -702,7 +702,7 @@
 						'transitionIn': 'elastic',
 						'transitionOut': 'elastic',
 						'href': href,
-						'type': 'swf',
+						'type': 'iframe',
 						'swf': {'wmode': 'transparent', 'allowfullscreen': 'true'},
 						'centerOnScroll': true,
 						'speedIn': 100,

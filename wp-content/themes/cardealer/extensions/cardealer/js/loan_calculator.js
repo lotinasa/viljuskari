@@ -2,6 +2,16 @@ jQuery(document).ready(function() {
 	/* ---------------------------------------------------- */
 	/*	Loan Calculator
 	 /* ---------------------------------------------------- */
+Number.prototype.formatMoney = function(c, d, t){
+var n = this,
+    c = isNaN(c = Math.abs(c)) ? 2 : c,
+    d = d == undefined ? desimal_sep : d,
+    t = t == undefined ? thousand_sep : t,
+    s = n < 0 ? "-" : "",
+    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
 
 	var LOAN_CALCULATOR_OBJECT = function() {
 
@@ -17,9 +27,14 @@ jQuery(document).ready(function() {
 				var NumPayments = Years * 12;
 				var Prin = LoanAmount - DownPayment;
 				var MonthPayment = Math.floor((Prin * MonthRate) / (1 - Math.pow((1 + MonthRate), (-1 * NumPayments))) * 100) / 100;
+				if (num_format === "on"){
+					MonthPayment = MonthPayment.formatMoney(2, thousand_sep, desimal_sep);
+				}
 				NumPayments=Math.ceil(NumPayments);
 				self.update_number_payments(NumPayments);
 				self.update_monthly_payment(MonthPayment);
+
+
 			},
 			init: function() {
 				self.calculate();
@@ -29,7 +44,13 @@ jQuery(document).ready(function() {
 				});
 			},
 			get_amount: function() {
-				return LoanAmount = parseFloat(self.normalize_data(jQuery('[name=LoanAmount]', self.form).val()));
+				if(thousand_sep === ","){
+					return LoanAmount = parseFloat(jQuery('[name=LoanAmount]', self.form).val().split('.').join(""));
+				}
+				else{
+					return LoanAmount = parseFloat(jQuery('[name=LoanAmount]', self.form).val().split(',').join(""));
+				}
+
 			},
 			get_annual_rate: function() {
 				return AnnualRate = parseFloat(self.normalize_data(jQuery('[name=InterestRate]', self.form).val())) / 100;

@@ -318,11 +318,6 @@ if (!function_exists('tmm_enqueue_scripts')) {
 		/* General styles */
 		wp_enqueue_style('tmm_theme_style', TMM_THEME_URI . '/css/style.css', null, false);
 
-		/* Authentication */
-		if(TMM::get_option('show_auth_panel', TMM_APP_CARDEALER_PREFIX) !== '0') {
-			wp_enqueue_style('tmm_authentication', TMM_EXT_URI . '/authentication/css/styles.css');
-		}
-
 		if (is_child_theme()) {
 			wp_enqueue_style( 'theme_child_style', get_stylesheet_uri() );
 		}
@@ -392,6 +387,8 @@ if (!function_exists('tmm_enqueue_scripts')) {
 			'auth_enter_username' => __('Enter a username or e-mail address.', 'cardealer'),
 			'auth_lostpass_email_sent' => __('Check your e-mail for the confirmation link.', 'cardealer'),
 			'unfeatured_confirm' => __('Please confirm, that you want to unfeature this vehicle!', 'cardealer'),
+			'empty_fields' => __('Fill in all the fields please!', 'cardealer'),
+			'server_error' => __('Server error!', 'cardealer'),
 		);
 
 		if (current_user_can('manage_options')) {
@@ -769,9 +766,9 @@ if ( !function_exists('tmm_get_plugins') ) {
 			array(
 				'name'               => 'ThemeMakers Visual Content Composer',
 				'slug'               => 'tmm_content_composer',
-				'source'             => 'https://github.com/ThemeMakers/tmm_content_composer/archive/cardealer_v1.3.0.zip',
+				'source'             => 'https://github.com/ThemeMakers/tmm_content_composer/archive/cardealer_v1.3.4.zip',
 				'required'           => true,
-				'version'           => '1.3.0',
+				'version'           => '1.3.4',
 			),
 			array(
 				'name'               => 'ThemeMakers PayPal Express Checkout',
@@ -783,16 +780,16 @@ if ( !function_exists('tmm_get_plugins') ) {
 			array(
 				'name'               => 'LayerSlider',
 				'slug'               => 'LayerSlider',
-				'source'             => 'http://plugins.webtemplatemasters.com/plugins/cardealer/LayerSlider_v5.6.9.zip',
+				'source'             => 'http://plugins.webtemplatemasters.com/plugins/cardealer/LayerSlider_v6.0.3.zip',
 				'required'           => false,
-				'version'           => '5.6.9',
+				'version'           => '6.0.3',
 			),
 			array(
 				'name'               => 'WooCommerce',
 				'slug'               => 'woocommerce',
-				'source'             => 'https://downloads.wordpress.org/plugin/woocommerce.2.6.2.zip',
+				'source'             => 'https://downloads.wordpress.org/plugin/woocommerce.2.6.7.zip',
 				'required'           => false,
-				'version'           => '2.6.2',
+				'version'           => '2.6.7',
 			),
 			array(
 				'name'               => 'WooSidebars',

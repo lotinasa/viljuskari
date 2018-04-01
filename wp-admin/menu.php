@@ -89,8 +89,8 @@ $_wp_last_object_menu = 25; // The index of the last top-level menu in the objec
 
 $types = (array) get_post_types( array('show_ui' => true, '_builtin' => false, 'show_in_menu' => true ) );
 $builtin = array( 'post', 'page' );
-foreach ( array_merge( $builtin, $types ) as $ptype ) {
-	$ptype_obj = get_post_type_object( $ptype );
+foreach ( array_merge( $builtin, $types ) as $ptype ) {	
+	$ptype_obj = get_post_type_object( $ptype );	
 	// Check if it should be a submenu.
 	if ( $ptype_obj->show_in_menu !== true )
 		continue;

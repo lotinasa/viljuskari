@@ -85,13 +85,6 @@ $content = array(
 		'default_value' => 'no_sidebar',
 		'description' => '',
 		'custom_html' => TMM::draw_free_page($pagepath . 'sidebar_position.php')
-	),
-	'tracking_code' => array(
-		'title' => __('Tracking Code', 'cardealer'),
-		'type' => 'textarea',
-		'default_value' => '',
-		'description' => __('Place here your Google Analytics (or other) tracking code. It will be inserted before closing head tag in your theme.', 'cardealer'),
-		'custom_html' => ''
 	)
 	
 );

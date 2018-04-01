@@ -15,6 +15,11 @@
 </p>
 
 <p>
+    <label for="<?php echo $widget->get_field_id('num_format'); ?>"><?php _e('Enable price formatting', 'cardealer') ?>:</label>
+    <input type="checkbox" id="<?php echo $widget->get_field_id('num_format'); ?>" name="<?php echo $widget->get_field_name('num_format'); ?>" value="true" <?php checked($instance['num_format'], 'true'); ?> />
+</p>
+
+<p>
     <label for="<?php echo $widget->get_field_id('number_of_years'); ?>"><?php _e('Term of Car Loan', 'cardealer') ?>:</label>
     <input class="widefat" type="text" id="<?php echo $widget->get_field_id('number_of_years'); ?>" name="<?php echo $widget->get_field_name('number_of_years'); ?>" value="<?php echo $instance['number_of_years']; ?>" />
 </p>

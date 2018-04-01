@@ -163,7 +163,7 @@ class TMM_Cardealer_User {
 			$data['show_map_to_visitors'] = 0;
 		}
 
-		update_user_meta($user_id, 'show_map_to_visitors', (int) $data['show_map_to_visitors']);
+		update_user_meta($user_id, 'show_map_to_visitors', (int)$data['show_map_to_visitors']);
 		update_user_meta($user_id, 'location_address', $data['location_address']);
 		update_user_meta($user_id, 'map_zoom', $data['map_zoom']);
 		update_user_meta($user_id, 'map_latitude', $data['map_latitude']);
@@ -174,13 +174,13 @@ class TMM_Cardealer_User {
 			$data['account_emails'] = 0;
 		}
 
-		update_user_meta($user_id, 'account_emails', (int) $data['account_emails']);
+		update_user_meta($user_id, 'account_emails', (int)$data['account_emails']);
 
 		if(!isset($data['user_posts_emails'])){
 			$data['user_posts_emails'] = 0;
 		}
 
-		update_user_meta($user_id, 'user_posts_emails', (int) $data['user_posts_emails']);
+		update_user_meta($user_id, 'user_posts_emails', (int)$data['user_posts_emails']);
 
 		echo 1; exit;
 	}
@@ -243,8 +243,8 @@ class TMM_Cardealer_User {
 
 	public static function get_user_map_data($user_id) {
 		$data = array();
-
 		$data['show_map_to_visitors'] = get_user_meta($user_id, 'show_map_to_visitors', true);
+        $data['show_map_to_visitors'] = ((!isset($data['show_map_to_visitors']) || '' == $data['show_map_to_visitors'])) ? 0 : $data['show_map_to_visitors'];
 		$data['location_address'] = get_user_meta($user_id, 'location_address', true);
 		$data['map_zoom'] = get_user_meta($user_id, 'map_zoom', true);
 		$data['map_latitude'] = get_user_meta($user_id, 'map_latitude', true);

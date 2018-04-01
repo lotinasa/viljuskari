@@ -9,6 +9,7 @@ include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_search/tab_sear
 include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_contact_forms/tab_contact_forms.php';
 include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_custom_sidebars/tab_custom_sidebars.php';
 include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_seo/tab_seo.php';
+include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_api/tab_api.php';
 include_once TMM_THEME_PATH . '/admin/theme_options/sections/tab_footer/tab_footer.php';
 
 /* modules and plugins can add custom tab to Theme Options */
@@ -242,6 +243,7 @@ function tmm_print_options_item($item_key, $item) {
                 'default_value' => $item['default_value'],
                 'description' => $item['description'],
                 'name_type' => (isset($item['name_type']) ? $item['name_type'] : ''),
+                'show_title' => (isset($item['show_title']) ? $item['show_title'] : 0),
                 'is_reset' => (isset($item['is_reset']) ? $item['is_reset'] : false),
                 'css_class' => (isset($item['css_class']) ? $item['css_class'] : ''),
                 'hide' => (isset($item['hide']) ? $item['hide'] : ''),

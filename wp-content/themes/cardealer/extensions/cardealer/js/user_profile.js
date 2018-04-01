@@ -101,7 +101,7 @@ var THEMEMAKERS_APP_CARDEALER_USER_PROFILE = function() {
 				zoom: zoom,
 				center: latLng,
 				mapTypeId: maptype,
-				scrollwheel: scrollwheel
+				scrollwheel: false
 			});
 
 
@@ -122,7 +122,7 @@ var THEMEMAKERS_APP_CARDEALER_USER_PROFILE = function() {
 				jQuery("#map_zoom").val(map.zoom);
 			});
 
-		},
+		}
 	};
 
 	return self;

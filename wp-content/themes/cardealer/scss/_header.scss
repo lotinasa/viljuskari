@@ -89,7 +89,7 @@ $breadcrumbs-subheader-font-color-hover		: #ff600a;
 
 .header {
 	position: relative;
-	z-index: 9;
+	z-index: 99;
 	padding: 0;
 	@include transition(height 0.25s ease-in-out);
 
@@ -239,7 +239,6 @@ $breadcrumbs-subheader-font-color-hover		: #ff600a;
 
 			.widget {
 				float: right;
-				margin-left: 20px;
 
 				&.widget_icl_lang_sel_widget {
 					height: 26px;
@@ -248,6 +247,7 @@ $breadcrumbs-subheader-font-color-hover		: #ff600a;
 				&.widget_contacts {
 					li {
 						padding: 0;
+						font-size: 13px;
 
 						&[class*="phone"] {
 							font-size: 16px;
@@ -279,11 +279,9 @@ $breadcrumbs-subheader-font-color-hover		: #ff600a;
 
 			.widget {
 				float: right;
-				margin-left: 50px;
 
 				&.widget_contacts {
 					li {
-						margin-left: 50px;
 						padding: 0;
 						font-size: 13px;
 
@@ -480,44 +478,39 @@ $breadcrumbs-subheader-font-color-hover		: #ff600a;
 
 	.layout-switcher {
 		position: absolute;
-		bottom: 12px;
+		bottom: 8px;
 		right: 0;
 
 		a {
 			display: inline-block;
-			width: 26px;
-			height: 26px;
+			overflow: hidden;
+			width: 20px;
+			height: 20px;
 			font: 0/0 a;
-			text-align: center;
-			background-color: #bfc2c5;
-			color: #fff;
-
-			&:hover {
-				color: #ffffff;
-			}
-		}
-
-		.layout-grid {
-			margin-right: 3px;
+			color: #bfc2c5;
+			@include transition(color .3s ease-in-out);
 
 			&:before {
-				font: 21px/26px "fontello";
-				content: '\ed39';
+				font: 20px/20px "fontello";
 			}
 
+			&:hover,
 			&.active {
-				background-color: #ff600a;
-			}
-		}
-
-		.layout-list {
-			&:before {
-				font: 20px/26px "fontello";
-				content: '\ee7c';
+				color: #000;
 			}
 
-			&.active {
-				background-color: #ff600a;
+			&.layout-grid {
+				margin-right: 3px;
+
+				&:before {
+					content: '\ed39';
+				}
+			}
+
+			&.layout-list {
+				&:before {
+					content: '\ee7c';
+				}
 			}
 		}
 	}

@@ -91,13 +91,11 @@ if ($count === 1) {
 		</div><!--/ .row-->
 
 		<div class="row">
-			<div class="col-xs-12">
-				<div class="adjective clearfix">
-					<p class="copyright"><?php echo TMM::get_option("copyright_text") ?></p>
-					<p class="developed"><?php _e('Developed by', 'cardealer'); ?>
-						<a target="_blank" href="http://webtemplatemasters.com">ThemeMakers</a>
-					</p>
-				</div><!--/ .adjective-->
+			<div class="col-xs-12 adjective">
+				<p class="alignleft"><?php echo TMM::get_option("copyright_text") ?></p>
+				<p class="alignright"><?php _e('Developed by', 'cardealer'); ?>
+					<a target="_blank" href="http://webtemplatemasters.com">ThemeMakers</a>
+				</p>
 			</div>
 		</div><!--/ .row-->
 
@@ -113,8 +111,6 @@ if ($count === 1) {
 
 	</div><!-- / .wrapper-inner -->
 </div><!-- / .wrapper -->
-
-<?php echo TMM_Ext_Authentication::draw_auth_panel() ?>
 
 <?php wp_footer(); ?>
 <input type="hidden" id="post_id" value="<?php the_ID() ?>">

@@ -46,13 +46,18 @@ switch ($video_type) {
 	case $video_types[0]:
 	case $video_types[1]:
 
-		$source_code = explode("?v=", $content);
-		$source_code = explode("&", $source_code[1]);
-		if (is_array($source_code)) {
-			$source_code = $source_code[0];
+		if ($video_type === $video_types[0]) {
+			$source_code = explode("?v=", $content);
+			$source_code = explode("&", $source_code[1]);
+			if (is_array($source_code)) {
+				$source_code = $source_code[0];
+			}
+		} else {
+			$source_code = explode("youtu.be/", $content);
+			$source_code = $source_code[1];
 		}
 		?>
-		<iframe <?php echo (isset($width) && !empty($width)) ? 'width="'.$width.'"' : ''; ?> <?php echo (!isset($width) || empty($width) || !isset($height)) ? '' : 'height="'.$height.'"';  ?> src="http://www.youtube.com/v/<?php echo $source_code ?>?wmode=transparent&amp;rel=0&amp;showinfo=0" allowFullScreen></iframe>
+		<iframe <?php echo (isset($width) && !empty($width)) ? 'width="'.$width.'"' : ''; ?> <?php echo (!isset($width) || empty($width) || !isset($height)) ? '' : 'height="'.$height.'"';  ?> src="https://www.youtube.com/embed/<?php echo $source_code ?>?wmode=transparent&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1" allowFullScreen></iframe>
 		<?php
 
 		break;

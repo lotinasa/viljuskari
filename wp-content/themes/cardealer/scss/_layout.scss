@@ -93,18 +93,6 @@
 
 @media only screen and (min-width: 480px) and (max-width: 992px) {
 
-	/* -------------------------------------------------- */
-	/*	Login Form
-	/* -------------------------------------------------- */
-
-	.account-wrapper {
-		top: 155px !important;
-
-		#{'.admin-bar'} & {
-			top: 100px !important;
-		}
-	}
-
 	// Header Styles
 	.header {
 		&.classic {
@@ -180,7 +168,7 @@
 		float: right;
 		height: 65px;
 		position: relative;
-		z-index: 999999;
+		z-index: 9999;
 	}
 	.menu-icon {
 		cursor: pointer;
@@ -627,51 +615,6 @@
 		box-shadow: none;
 	}
 
-	// Header Styles
-	.header {
-		&.classic {
-			.nav-bar {
-				//margin-top: -160px;
-				//margin-bottom: 55px;
-			}
-			.top-bar {
-				.header-cart {
-					margin-left: 0;
-				}
-
-				.widget {
-					float: none;
-					margin-left: 0;
-
-					&.widget_contacts {
-						li {
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
-
-		&.alternate {
-			.top-bar {
-				.header-cart {
-					margin-left: 0;
-				}
-
-				.widget {
-					float: none;
-					margin-left: 0;
-
-					&.widget_contacts {
-						li {
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-
 	/* ---------------------------------------------------------------------- */
 	/*	Responsive Navigation
 	/* ---------------------------------------------------------------------- */
@@ -713,7 +656,7 @@
 		float: right;
 		height: 65px;
 		position: relative;
-		z-index: 999999;
+		z-index: 9999;
 	}
 	.menu-icon {
 		cursor: pointer;
@@ -884,19 +827,6 @@
 	.sbl #sidebar { float: none; }
 
 	.wrap { width: 280px; }
-
-	/* -------------------------------------------------- */
-	/*	Login Form
-	/* -------------------------------------------------- */
-
-	.account-wrapper {
-		.form-reg .log {
-			left: -35px;
-			width: 35px;
-			height: 31px;
-			font-size: 0;
-		}
-	}
 
 	/* ---------------------------------------------------------------------- */
 	/*	Content
@@ -1295,18 +1225,6 @@
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-
-	/* -------------------------------------------------- */
-	/*	Login Form
-	/* -------------------------------------------------- */
-
-	.account-wrapper {
-		top: 205px !important;
-
-		#{'.admin-bar'} & {
-			top: 150px !important;
-		}
-	}
 
 	// Sticky hav placeholder
 	.space { display: none; }

@@ -18,16 +18,6 @@ class TMM_Ext_Authentication {
 		return TMM_EXT_URI . '/authentication';
 	}
 
-	public static function draw_auth_panel() {
-		if(TMM::get_option('show_auth_panel', TMM_APP_CARDEALER_PREFIX) !== '0') {
-			$data = array();
-			return TMM::draw_free_page(self::get_application_path() . '/views/auth_panel.php', $data);
-		} else {
-			return '';
-		}
-
-	}
-
 	public static function user_logout() {
 		wp_logout();
 	}

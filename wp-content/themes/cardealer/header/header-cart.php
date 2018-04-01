@@ -1,6 +1,6 @@
 <?php if ( class_exists('woocommerce') && tmm_show_header_cart() ) { ?>
 
-	<div  class="header-cart">
+	<div class="header-cart">
 		<a href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" class="icon-basket"></a>
 		<span class="cart-products-count"><?php echo esc_html(WC()->cart->cart_contents_count); ?></span>
 

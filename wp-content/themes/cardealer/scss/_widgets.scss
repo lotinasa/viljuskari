@@ -56,4 +56,52 @@ $widget-car-body-title-color-hover						: #ff600a;
 			}
 		}
 	}
+
+	// Loan Calculator
+	&.widget_loan_calculator {
+		ul {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+
+			-webkit-flex-flow: row wrap;
+			-ms-flex-flow: row wrap;
+
+			li {
+				min-width: 30px;
+				padding: 5px 0;
+				line-height: 28px;
+
+				-webkit-flex: 1 0 50%;
+				flex: 1 0 50%;
+
+				&:nth-child(2n) {
+					text-align: right;
+				}
+
+				&:nth-child(7),
+				&:nth-child(9) {
+					line-height: 1.5em;
+				}
+
+				&:last-child {
+					text-align: right;
+					padding: 10px 0 0;
+					-webkit-flex: 1 0 100%;
+					flex: 1 0 100%;
+				}
+
+				input {
+					text-align: right;
+				}
+			}
+		}
+	}
 }

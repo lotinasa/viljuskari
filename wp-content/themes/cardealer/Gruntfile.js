@@ -20,7 +20,9 @@ module.exports = function(grunt) {
 						'js/theme.js',
 						'extensions/cardealer/js/front.js',
 						'extensions/cardealer/js/loan_calculator.js',
-						'extensions/authentication/js/general.js',
+						'js/auth/general.js',
+						'js/auth/dialogFx.js',
+						'js/auth/classie.js',
 						'woocommerce/assets/js/frontend/add-to-cart.js'
 					],
 					'extensions/cardealer/js/add_new_car.min.js': [

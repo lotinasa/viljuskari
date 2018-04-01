@@ -15,6 +15,44 @@ function save_options(type) {
 	});
 }
 
+function get_url_params(param){
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace(
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;
+	}
+	return vars;
+}
+
+jQuery(function() {
+
+	  var page_settings = get_url_params('page');
+
+      jQuery('.admin-nav li a').on('click',function(){
+
+        var activeTab = jQuery(this).attr('href');
+
+	  	var date = new Date();
+		var minutes = 10;
+			date.setTime(date.getTime() + (minutes * 60 * 1000));
+		if (page_settings == 'tmm_theme_options'){
+			Cookies.set('selectedTab_cardealer', activeTab, {expires: date});
+		}
+		else{
+			Cookies.set('selectedTab_cardealer_car_settings', activeTab, {expires: date});
+		}
+
+
+      })
+
+});
+
 
 function getURLParameter(name) {
 	return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]);
@@ -24,12 +62,12 @@ function getURLParameter(name) {
         /* ---------------------------------------------------------------------- */
 	/*	Admin Navigation Plugin
 	 /* ---------------------------------------------------------------------- */
-function init_tabs() {    
-    
-    
-(function($) {    
-                
-    
+function init_tabs() {
+
+
+(function($) {
+
+
 	$.AdminNavigation = function(el, options) {
 		this.el = $(el);
 		this.init(options);
@@ -47,16 +85,41 @@ function init_tabs() {
 		},
 		slideNav: function(self) {
 
-			var $navLi = this.adminNav.children('li'),
+			var page_settings = get_url_params('page');
+
+			if (page_settings == 'tmm_theme_options'){
+				var activeTab = Cookies.get('selectedTab_cardealer');
+			}
+			else{
+				var activeTab = Cookies.get('selectedTab_cardealer_car_settings');
+			}
+
+
+
+			if (activeTab){
+				var $navLi = this.adminNav.children('li'),
+				sectionTab = this.sectionTab;
+				jQuery('ul.admin-nav li:has(a[href="' + activeTab + '"])').first().addClass('current-shortcut');
+				jQuery('ul.admin-nav li:has(a[href="' + activeTab + '"])').last().addClass('sub-current');
+
+				if (jQuery('.current-shortcut > ul li').hasClass('current-shortcut') && jQuery('.current-shortcut > ul li').hasClass('sub-current')){
+					jQuery('.sub-current').removeClass('current-shortcut');
+				}
+				jQuery('.current-shortcut > ul').addClass('curr-ul');
+				jQuery('.curr-ul').slideDown(this.slideSpeed);
+
+				sectionTab.hide();
+				jQuery(activeTab).show();
+
+			}
+
+			else{
+				var $navLi = this.adminNav.children('li'),
 					sectionTab = this.sectionTab;
 			sectionTab.hide().first().show();
+
 			$navLi.eq(0).addClass('current-shortcut');
-			
-			$navLi.each(function (idx, val) {
-				if ($(val).children('ul').length) {
-					$(val).addClass('current-submenu');
-				}
-			});
+			}
 
 			this.adminNav.on('click', 'a', function(e) {
 				$navLi.find('li').removeClass('sub-current');
@@ -73,6 +136,7 @@ function init_tabs() {
 				} else {
 					$target.addClass('sub-current');
 				}
+
 				$target.children('ul:hidden').length ? $targetUl.slideDown(this.slideSpeed) : $targetUl.slideUp(this.slideSpeed);
 				e.preventDefault();
 			});
@@ -99,8 +163,8 @@ function init_tabs() {
 	$.fn.AdminNavigation = function(options) {
 		return $.data(this, 'AdminNavigation', new $.AdminNavigation(this, options));
 	};
-        
-        
+
+
         /* ---------------------------------------------------------------------- */
 	/*	Custom Events
 	 /* ---------------------------------------------------------------------- */
@@ -164,9 +228,9 @@ function init_tabs() {
 		};
 
 	}());
-        
-        
-        
+
+
+
 })(jQuery);
 
 }
@@ -289,9 +353,9 @@ jQuery(document).ready(function($) {
 	show_loader();
 
 	init_tabs();
-        
+
         jQuery('.admin-container').AdminNavigation();
-        
+
         if ($('.showhide').length) {
 			$('.showhide').showHide();
 		}
@@ -372,10 +436,10 @@ jQuery(document).ready(function($) {
 
 
 	jQuery('.button_reset_options').life('click', function()
-	{            
+	{
 		if (confirm(lang_sure)) {
-			jQuery.each(tmm_options_reset_array, function(key, value) {                           
-				var elem = jQuery("[name=" + value + "]");                                     
+			jQuery.each(tmm_options_reset_array, function(key, value) {
+				var elem = jQuery("[name=" + value + "]");
                                 elem.val(elem.data('default-value'));
 			});
 			save_options("reset");
@@ -383,7 +447,7 @@ jQuery(document).ready(function($) {
 
 		return false;
 	});
-	
+
 	//Pattern Selector
 	jQuery('.thumb_pattern a').click(function() {
 		jQuery('.thumb_pattern a').removeClass('current');
@@ -490,35 +554,39 @@ jQuery(document).ready(function($) {
  /* ---------------------------------------------------- */
 //for color options history
 jQuery.cookie = function(name, value, options) {
-	if (typeof value != 'undefined') {
-		options = options || {};
-		if (value === null) {
-			value = '';
-			options.expires = -1;
-		}
-		var expires = '';		
+		if (typeof value != 'undefined') {
+			options = options || {};
+			if (value === null) {
+				value = '';
+				options.expires = -1;
+			}
+			var expires = '';
+			var date = new Date();
+			date.setTime(date.getTime() + 24 * 60 * 60 * 30 * 1000);
+			expires = date.toUTCString();
 
-		var date = new Date();
-		date.setTime(date.getTime() + 24 * 60 * 60 * 30 * 1000);
-		expires = '; expires=' + date.toUTCString();
+
+			var path = options.path ? options.path : '';
+			var domain = options.domain ? options.domain : '';
+			var secure = options.secure ? 'true' : 'false';
+			//document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+			Cookies.set(name, encodeURIComponent(value), expires, path, domain, secure);
 
 
-		var path = options.path ? '; path=' + (options.path) : '';
-		var domain = options.domain ? '; domain=' + (options.domain) : '';
-		var secure = options.secure ? '; secure' : '';
-		document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
-	} else {
-		var cookieValue = null;
-		if (document.cookie && document.cookie != '') {
-			var cookies = document.cookie.split(';');
-			for (var i = 0; i < cookies.length; i++) {
-				var cookie = jQuery.trim(cookies[i]);
-				if (cookie.substring(0, name.length + 1) == (name + '=')) {
-					cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-					break;
+		} else {
+			var cookieValue = null;
+			if (Cookies.get() && Cookies.get() != '') {
+				var cookies = Cookies.get();
+
+				for (var key in cookies) {
+				  if (cookies.hasOwnProperty(key)) {
+				    	if (key == name){
+				    		cookieValue = decodeURIComponent(cookies[key]);
+				    		break;
+				    	}
+				  }
 				}
 			}
+			return cookieValue;
 		}
-		return cookieValue;
-	}
-};
+	};

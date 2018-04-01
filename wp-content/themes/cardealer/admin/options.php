@@ -187,13 +187,15 @@ function thememakers_theme_admin_head()
 	wp_enqueue_script('jquery-ui-tabs');
 	wp_enqueue_script('jquery-ui-slider');
 	wp_enqueue_script('jquery-ui-sortable');
-	
+
 	if ( isset($_GET['page']) && ($_GET['page'] == 'tmm_theme_options' || $_GET['page'] == 'tmm_cardealer_settings') ) {
 		wp_enqueue_media();
 	}
 
 	wp_enqueue_script('media-upload');
 	wp_enqueue_script('thememakers_theme_admin_js', TMM_THEME_URI . '/admin/js/general.js', array('jquery'));
+
+	wp_enqueue_script('thememakers_cache_js', TMM_THEME_URI . '/admin/theme_options/js/js.cookie.js', array('jquery'));
 
 	wp_enqueue_style('thickbox');
 	wp_enqueue_script('thickbox');

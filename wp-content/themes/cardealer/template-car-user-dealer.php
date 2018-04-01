@@ -143,12 +143,13 @@ if (!$user_data) {
 			<div class="col-md-12">
 
 				<?php $map_data = TMM_Cardealer_User::get_user_map_data( $user_data->data->ID ); ?>
+				<?php $api_key = TMM::get_option( "google_map_api" ); ?>
 
 				<?php if ( $map_data['show_map_to_visitors'] ){ ?>
 
 					<h3 class="section-title"><?php _e( 'Location on Map', 'cardealer' ); ?></h3>
 
-					<?php echo do_shortcode( '[google_map height="400" width="100%" mode="map" location_mode="coordinates" latitude="' . $map_data['map_latitude'] . '" longitude="' . $map_data['map_longitude'] . '" address="' . $map_data['location_address'] . '" zoom="' . $map_data['map_zoom'] . '" enable_scrollwheel="0" maptype="ROADMAP" enable_marker="1" enable_popup="0" marker_is_draggable="0"]' ); ?>
+					<?php echo do_shortcode( '[google_map height="400" width="100%" key="'. $api_key .'" mode="map" location_mode="coordinates" latitude="' . $map_data['map_latitude'] . '" longitude="' . $map_data['map_longitude'] . '" address="' . $map_data['location_address'] . '" zoom="' . $map_data['map_zoom'] . '" enable_scrollwheel="0" maptype="ROADMAP" enable_marker="1" enable_popup="0" marker_is_draggable="0"]' ); ?>
 
 				<?php } ?>
 

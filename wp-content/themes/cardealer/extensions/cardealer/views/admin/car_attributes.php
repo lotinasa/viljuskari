@@ -133,13 +133,13 @@ if(!$max_desc_count){
 			jQuery('#save_edited_car').life('submit', function () {
 				return save_edited_car();
 			});
-			
+
 			jQuery('#car_state').life('change', function(){
 				relate_condition_mileage(jQuery(this).val());
 			});
-			
+
 			relate_condition_mileage(jQuery('#car_state').val());
-			
+
 			function relate_condition_mileage(condition){
 				if(condition === 'car_is_new'){
 					jQuery('#car_mileage').val(0).prop('disabled', 'disabled');
@@ -167,7 +167,7 @@ if(!$max_desc_count){
 					car_mileage_val = ( isNaN(car_mileage_val) !== true ) ? car_mileage_val : '';
 					car_mileage.val(car_mileage_val);
 				}
-		
+
 				items.removeClass('required')
 					.each(function (i) {
 						var $this = jQuery(this),
@@ -266,9 +266,9 @@ if(!$max_desc_count){
 		<input type="hidden" value="1" name="tmm_new_post_saving"/>
 		<?php
 	}
-	
+
 	?>
-	
+
 	<input type="hidden" value="1" name="tmm_meta_saving"/>
 
 	<?php if(!isset($options['enable_video']) || $options['enable_video']){ ?>
@@ -497,7 +497,7 @@ if(!$max_desc_count){
 								</label>
 
 								<?php
-								$now   = (int) date( "Y" );
+								$now   = (int) date( "Y" ) + 1;
 								$years = array();
 								for ( $i = $now; $i >= 1900; $i -- ) {
 									$years[] = $i;

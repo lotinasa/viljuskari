@@ -108,14 +108,22 @@ $child_sections['default_settings'] = array(
 					'type' => 'select',
 					'default_value' => 'comma',
 					'values' => array(
-						'comma' => __('Comma notation', 'cardealer'),
-						'dot' => __('Dot notation', 'cardealer'),
+						'comma' => __('American', 'cardealer'),
+						'dot' => __('Europenian', 'cardealer'),
 					),
-					'title' => __('Thousand Separator', 'cardealer'),
-					'description' => __("Set the thousand separator in a price", 'cardealer'),
+					'title' => __('Currency Format', 'cardealer'),
+					'description' => __("According to the style guide used by international institutions", 'cardealer'),
 					'css_class' => '',
 					'show_title' => true
 				),
+				'show_float_format' => array(
+					'type' => 'checkbox',
+					'default_value' => 0,
+					'title' => __('Enable float price format', 'cardealer'),
+					'description' => __("Display all prices in float format", 'cardealer'),
+					'css_class' => '',
+					'show_title' => true
+				)
 			)
 		),
 		'block0' => array(

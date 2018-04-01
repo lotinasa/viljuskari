@@ -95,10 +95,9 @@
             </div>
 
         </div>
-        <footer class="meta clearfix">
+        <footer class="meta">
             <?php if (TMM::get_option("blog_single_show_comments") !== '0') : ?>
-                <a class="icon-comments"
-                   href="<?php the_permalink() ?>#comments"><?php echo get_comments_number(); ?> <?php _e('comments', 'cardealer'); ?></a>
+                <a class="icon-comments" href="<?php the_permalink() ?>#comments"><?php echo get_comments_number(); ?> <?php _e('comments', 'cardealer'); ?></a>
             <?php endif; ?>
             <a class="button orange" href="<?php the_permalink() ?>"><?php _e('Details', 'cardealer'); ?></a>
         </footer>

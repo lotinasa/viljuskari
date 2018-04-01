@@ -99,7 +99,7 @@ var THEMEMAKERS_APP_CARDEALER_ADD_NEW_CAR = function () {
 							val = $this.val(),
 							id = $this.attr('id'),
                             skip_mileage = false;
-                            
+
                         if(car_state === 'car_is_new' && id === car_mileage.attr('id')){
                             skip_mileage = true;
                         }

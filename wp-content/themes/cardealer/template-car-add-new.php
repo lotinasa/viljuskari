@@ -94,6 +94,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 			jQuery(function() {
 				if (locations_max_level >= 2) {
+					jQuery('#tax_carlocation1').val(jQuery(jQuery('#tax_carlocation1 option')[1]).val());
 					draw_locations_select(jQuery('#tax_carlocation1').val(), 2);
 					jQuery('#tax_carlocation1').life('change', function() {
 						draw_locations_select(jQuery(this).val(), 2);
@@ -142,6 +143,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 						select_cont.html(responce);
 						if (locations_max_level >= 3) {
 							if (id == 2) {
+								jQuery('#tax_carlocation2').val(jQuery(jQuery('#tax_carlocation2 option')[1]).val());
 								draw_locations_select(jQuery('#tax_carlocation2').val(), 3);
 							}
 						}
@@ -327,7 +329,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											<p>
 												<label for="car_year"><strong><?php _e('Year', 'cardealer'); ?></strong></label>
 												<?php
-												$now = (int) date("Y");
+												$now = (int) date("Y") + 1;
 												$years = array();
 
 												for ($i = $now; $i >= 1900; $i--) {
@@ -551,11 +553,12 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											'selected' => 0,
 											'id' => 'tax_carlocation1',
 											'name' => 'car_carlocation[]',
-											'parent_id' => 0
+											'parent_id' => 0,
+											'class' => 'hide'
 										));
 										?>
 
-										<span id="tax_carlocation_container2">
+										<span id="tax_carlocation_container2" class="hide">
 											<label class="sel">
 												<select>
 													<option  value=""><?php _e('None', 'cardealer'); ?></option>
@@ -607,7 +610,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 							</div>
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange align-btn-right"><?php _e('Next Step', 'cardealer'); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignright"><?php _e('Next Step', 'cardealer'); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -711,8 +714,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange align-btn-left"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange align-btn-right"><?php _e( 'Next Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -757,8 +760,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange align-btn-left"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange align-btn-right"><?php _e( 'Next Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -782,8 +785,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange align-btn-left"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<input type="submit" value="<?php _e( 'Complete Submission', 'cardealer' ); ?>" class="button orange align-btn-right"/>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<input type="submit" value="<?php _e( 'Complete Submission', 'cardealer' ); ?>" class="button orange alignright"/>
 
 						</div>
 						<!--/ .cart-content-->

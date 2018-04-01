@@ -293,8 +293,9 @@ if (!function_exists('tmm_get_car_price')) {
 		$price = '';
 		$currency_pos = TMM::get_option( 'car_price_symbol_pos', TMM_APP_CARDEALER_PREFIX );
 		$thousand_sep = TMM::get_option( 'car_price_thousand_separator', TMM_APP_CARDEALER_PREFIX );
+		$show_float_format = TMM::get_option( 'show_float_format', TMM_APP_CARDEALER_PREFIX ) ? '2' : '0';
+		$desimal_sep = $thousand_sep === 'dot' ? ',' : '.';
 		$thousand_sep = $thousand_sep === 'dot' ? '.' : ',';
-		$desimal_sep = '.';
 		$price_val = get_post_meta($post_id, 'car_price', 1);
 
 		if ($value_only) {
@@ -304,7 +305,7 @@ if (!function_exists('tmm_get_car_price')) {
 			if (!empty($price_val)) {
 
 				$price_val = doubleval($price_val);
-				$price_val = number_format($price_val, 0, $desimal_sep, $thousand_sep);
+				$price_val = number_format($price_val, $show_float_format, $desimal_sep, $thousand_sep);
 
 				if ($currency_pos === 'right' || $currency_pos === 'right_space') {
 					$price .= $price_val;

@@ -2,12 +2,49 @@
 Contributors: ThemeMakers team
 Tags: light, dark, gray, red, responsive-layout, right-sidebar, left-sidebar,  one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.9
-Tested up to: 4.5.2
-Stable tag: 4.5
+Tested up to: 4.6.1
+Stable tag: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
+
+= RELEASE 1.2.7 =
+* updated: LayerSlider to v6.0.3
+* fixed: offset issue caused by LayerSlider
+* fixed: fluid container in theme grid
+
+= RELEASE 1.2.6 =
+* updated: LayerSlider to v6.0.0
+* updated: added couple more strings to translation files
+* fixed: string appearance issue in registering window
+
+= RELEASE 1.2.5.1 =
+* fixed: quick fix for missed icons
+
+= RELEASE 1.2.5 =
+* updated: Optimised theme performance
+* updated: Optimised theme font icons
+* fixed: Placeholders issue in IE and FF
+* fixed: Issue with cookie saving tab states in theme oprions
+
+= RELEASE 1.2.4 =
+* updated: single car page view
+* updated: login modal window
+* updated: price formatting
+* updated: loan calculator
+* fixed: Youtube video issue
+* fixed: issue with the search panel
+* fixed: Issue with image shortcode when using fancybox
+* fixed: Issue with locations, containing apex symbol
+
+= RELEASE 1.2.3 =
+* fixed: Adding new car images in JPEG format.
+* fixed: Google map errors.
+
+= RELEASE 1.2.2 =
+* updated: Google map API key option
+* fixed: suv svg file issue
 
 = RELEASE 1.2.1 =
 * updated: Woocommerce 2.6.2 compatibility

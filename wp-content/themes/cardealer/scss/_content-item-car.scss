@@ -4,18 +4,13 @@
 
 .item-car {
 
-	.page-subheader {
-
-		.buttons {
-			padding-top: 15px;
-			text-align: right;
-		}
+	.buttons {
+		text-align: right;
 	}
 
 	.gallery {
 		display: block;
 		margin-bottom: 10px;
-		margin-right: 20px;
 		vertical-align: top;
 
 		#{'.no_sidebar'} & {
@@ -24,75 +19,74 @@
 		}
 	}
 
-	.list-image {
-		margin: 10px 0 0;
+	.price-title {
+		text-align: right;
 
-		li {
-			display: block;
-			float: left;
-			margin: 0 11px 11px 0;
+		h6 {
+			display: inline-block;
+			margin: 0 15px 0 0;
 		}
-	}
-
-	.extra {
-		display: inline-block;
-		vertical-align: top;
-		width: 250px;
-
-		&.empty-gallery {
-			display: block;
-
-			.publish-date-car,
-			.social-share-block {
-				float: left;
-				width: 50%;
-			}
-		}
-
-		h6 { margin-bottom: 5px; }
 
 		.price {
-			font-size: 24px;
-			margin-bottom: 15px;
+			font-size: 28px;
+			line-height: 1.7;
+			margin: 0;
+
+			&:before {
+				display: none;
+			}
 		}
 	}
 
-	.entry-item {
-		clear: both;
-
-		.video-box {
-			margin-bottom: 10px;
+	.tech {
+		.section-title {
+			margin-bottom: 5px;
+			border-bottom: none;
 		}
 	}
 
-	/* Type Car Position */
-	.type-car-position {
-		margin: 0 0 30px 0;
-		font-weight: 700;
+	/* Tech Data List */
+	.data-list {
+		width: 100%;
+		margin: 0 0 20px;
+		padding: 0;
+		list-style: none;
+
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
 
 		&:after {
 			@include clearfix();
 		}
 
 		li {
-			padding: 3px 0;
-			list-style: square inside;
-			color: #ff600a;
+			min-width: 30px;
+			padding: 5px 0;
+			line-height: 25px;
+			border-bottom: 1px solid rgba(100, 100, 100, .2);
 
-			b {
+			-webkit-flex: 1 0 50%;
+			flex: 1 0 50%;
+
+			&:first-child, &:nth-child(2) {
+				border-top: 1px solid rgba(100, 100, 100, .2);
+			}
+
+			&:nth-child(2n-1) {
 				color: #7b7b7b;
 				font-weight: 600;
 			}
 
-			span {
-				color: #7b7b7b;
-				font-weight: 100;
-				text-transform: capitalize;
+			&.vin,
+			&.engine-type,
+			&.body-style { text-transform: uppercase; }
 
-				&.vin,
-				&.engine-type,
-				&.body-style { text-transform: uppercase; }
-			}
 		}
 	}
 

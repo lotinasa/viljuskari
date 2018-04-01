@@ -485,7 +485,8 @@ class ThemeMakers_LoanCalculator_Widget extends WP_Widget {
 			'title' => 'Loan Calculator',
 			'loan_amount' => 15000,
 			'interest_rate' => 3,
-			'number_of_years' => 4
+			'num_format' => 'true',
+			'number_of_years' => 4,
 		);
 	}
 
