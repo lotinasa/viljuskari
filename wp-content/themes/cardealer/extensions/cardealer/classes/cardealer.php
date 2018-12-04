@@ -313,7 +313,7 @@ class TMM_Ext_Car_Dealer {
 		?>
 
 		<select<?php echo $class ?><?php echo $id ?> name="<?php echo $data['name'] ?>" <?php echo (isset($data['required']) && $data['required']==1) ? ' data-required="1"' : ''; ?>>
-			<option <?php selected($data['selected'], 0); ?> value=""><?php _e('None', 'cardealer'); ?></option>
+			<option <?php selected($data['selected'], 0); ?> value=""><?php _e('Sve', 'cardealer'); ?></option>
 			<?php foreach ($terms as $term): ?>
 				<option value="<?php echo $term->id ?>" <?php selected($term->id, $data['selected']); ?>><?php _e($term->name, 'cardealer'); ?></option>
 			<?php endforeach; ?>
