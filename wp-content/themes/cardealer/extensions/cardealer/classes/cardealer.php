@@ -28,13 +28,13 @@ class TMM_Ext_Car_Dealer {
 		$options = array();
 		$def_options = TMM::get_option('default_options', TMM_APP_CARDEALER_PREFIX);
 		self::$opt_groups = array(
-			'transmission' => __('Transmission', 'cardealer'),
-			'fuel_type' => __('Fuel Type', 'cardealer'),
-			'condition' => __('Condition', 'cardealer'),
-			'body' => __('Car Bodies', 'cardealer'),
-			'interior_color' => __('Interior Colors', 'cardealer'),
-			'exterior_color' => __('Exterior Colors', 'cardealer'),
-			'currency' => __('Currencies', 'cardealer'),
+			'transmission' => __('Tip prenosa', 'cardealer'),
+			'fuel_type' => __('Vrst pogona', 'cardealer'),
+			'condition' => __('Stanje mašine', 'cardealer'),
+			'body' => __('Tip', 'cardealer'),
+			'interior_color' => __('Nosivost', 'cardealer'),
+			'exterior_color' => __('Vrsta sklopljene mašine', 'cardealer'),
+			'currency' => __('Valuta', 'cardealer'),
 		);
 
 		if (empty($def_options) || !is_array($def_options)) {

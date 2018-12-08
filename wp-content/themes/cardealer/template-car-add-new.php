@@ -217,22 +217,22 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 						<ul class="cart-items clearfix">
 
 							<li class="step-now cart-title" id="head_step1">
-								<h5 class="cart-title"><?php _e('Features', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Osnovno', 'cardealer'); ?></h5>
 								<span class="circle">1</span>
 							</li>
 
 							<li class="cart-title" id="head_step2">
-								<h5 class="cart-title"><?php _e('Details', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Detalji', 'cardealer'); ?></h5>
 								<span class="circle">2</span>
 							</li>
 
 							<li class="cart-title" id="head_step3">
-								<h5 class="cart-title"><?php _e('Photos/Videos', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Slike/Video', 'cardealer'); ?></h5>
 								<span class="circle">3</span>
 							</li>
 
 							<li class="cart-title" id="head_step4">
-								<h5 class="cart-title"><?php _e('Submit', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Snimi', 'cardealer'); ?></h5>
 								<span class="circle">4</span>
 							</li>
 
@@ -623,7 +623,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 							</div>
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignright"><?php _e('Next Step', 'cardealer'); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignright"><?php _e('Sledeći', 'cardealer'); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -727,8 +727,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignright"><?php _e( 'Sledeći', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -751,7 +751,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 								<div class="divider"></div>
 
 								<p>
-									<a class="button orange" id="add_car_video" href="#"><?php _e( 'Add video', 'cardealer' ); ?></a>
+									<a class="button orange" id="add_car_video" href="#"><?php _e( 'Dodaj video', 'cardealer' ); ?></a>
 								</p>
 
 								<ul class="cars-videos" id="cars_videos">
@@ -762,7 +762,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 										</p>
 
 										<p>
-											<a href="#" class="remove_car_video button orange"><?php _e( 'Remove', 'cardealer' ); ?></a>
+											<a href="#" class="remove_car_video button orange"><?php _e( 'Ukloni', 'cardealer' ); ?></a>
 										</p>
 									</li>
 
@@ -773,8 +773,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange alignright"><?php _e( 'Sledeći', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -798,8 +798,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
-							<input type="submit" value="<?php _e( 'Complete Submission', 'cardealer' ); ?>" class="button orange alignright"/>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
+							<input type="submit" value="<?php _e( 'Završi unos', 'cardealer' ); ?>" class="button orange alignright"/>
 
 						</div>
 						<!--/ .cart-content-->

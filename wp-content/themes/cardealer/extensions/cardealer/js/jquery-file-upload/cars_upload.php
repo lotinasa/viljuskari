@@ -35,7 +35,7 @@ if($upgrade_status_page !== ''){
 <div class="ad edit-form">
 
 	<div class="edit-form__title">
-		<h3><?php _e('Edit Vehicle Pictures', 'cardealer'); ?></h3>
+		<h3><?php _e('Uredi slike', 'cardealer'); ?></h3>
 	</div><!-- .edit-form__title -->
 
 	<div class="edit-form__entry">
@@ -56,7 +56,7 @@ if($upgrade_status_page !== ''){
 					<?php
 				}
 				if(!empty($user_file_ext)){
-					echo ' ' . __('Acceptable image extensions', 'cardealer') . ': ' . implode(', ', $user_file_ext);
+					echo ' ' . __('Dozvoljeni formati slika', 'cardealer') . ': ' . implode(', ', $user_file_ext);
 				}
 				?>
 			</p>
@@ -70,7 +70,7 @@ if($upgrade_status_page !== ''){
 				<div class="fileupload-buttons">
 
             <span class="fileinput-button button orange">
-	            <span><?php _e('Browse Photos ...', 'cardealer'); ?></span>
+	            <span><?php _e('Dodaj slike ...', 'cardealer'); ?></span>
                 <input type="file" name="files[]" multiple="" />
 			</span>
 
@@ -166,7 +166,7 @@ if($upgrade_status_page !== ''){
     <span class="size">{%=o.formatFileSize(file.size)%}</span>
 	</td>
 	<td>
-    <button class="delete button orange" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}><?php _e('Remove', 'cardealer'); ?></button>
+    <button class="delete button orange" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}><?php _e('Ukloni', 'cardealer'); ?></button>
 	</td>
 	</tr>
 	{% } %}
