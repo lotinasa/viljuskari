@@ -28,6 +28,6 @@
 				src="<?php echo $logo_img; ?>" alt="<?php bloginfo( 'description' ); ?>" /></a>
 	<?php } else { ?>
 		<a title="<?php bloginfo( 'description' ); ?>" href="<?php echo esc_url( home_url('/') ); ?>"><h1>
-				<span>Car</span>Dealer</h1></a>
+				<span>Car</span>Dealery</h1></a>
 	<?php } ?>
 </div>
