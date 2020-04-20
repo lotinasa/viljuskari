@@ -5,7 +5,8 @@ if (TMM::get_option("api_key_google")){
 	$inique_id = uniqid();
 
 	$google_maps_api_key = (TMM::get_option("api_key_google")) ? 'key=' . TMM::get_option("api_key_google") . '&' : '' ;
-	$map_link = '//maps.google.com/maps/api/js?' . $google_maps_api_key . 'sensor=false';
+	$map_link = '//maps.google.com/maps/api/js?' . $google_maps_api_key;
+	// $map_link = '//maps.google.com/maps/api/js?' . $google_maps_api_key . 'sensor=false';
 	wp_enqueue_script("tmm_shortcode_google_api_js", $map_link);
 
 	$js_controls = '{}';
@@ -17,7 +18,8 @@ if (TMM::get_option("api_key_google")){
 	if (isset($location_mode)) {
 		if ($location_mode == 'address') {
 			$address = str_replace(' ', '+', $address);
-			$geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?address=' . $address . '&sensor=false');
+			//$geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?address=' . $address . '&sensor=false');
+			$geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?' . $google_maps_api_key . 'address=' . $address);
 			$output = json_decode($geocode);
 			if ($output->status != 'OVER_QUERY_LIMIT') {
 				$latitude = $output->results[0]->geometry->location->lat;
