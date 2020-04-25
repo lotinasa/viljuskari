@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cardealer\n"
 "POT-Creation-Date: 2016-11-20 14:55+0000\n"
-"PO-Revision-Date: 2016-11-20 14:57+0000\n"
+"PO-Revision-Date: 2020-04-25 19:26+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -410,28 +410,6 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
-#: template-car-user-login.php:61
-msgid "Log in"
-msgstr ""
-
-#: template-car-user-login.php:79
-msgid "Restore Password"
-msgstr ""
-
-#: template-car-user-login.php:84
-msgid ""
-"Please enter your username or email address. You will receive a link to "
-"create a new password via email."
-msgstr ""
-
-#: template-car-user-login.php:87
-msgid "Username or email"
-msgstr ""
-
-#: template-car-user-login.php:92
-msgid "Reset Password"
-msgstr ""
-
 #: template-car-user-login.php:105
 msgid "Enter a new password below."
 msgstr ""
@@ -446,51 +424,6 @@ msgstr ""
 
 #: template-car-user-login.php:120
 msgid "Save"
-msgstr ""
-
-#: template-car-user-login.php:167
-msgid "Register now for"
-msgstr ""
-
-#: template-car-user-login.php:173 template-car-user-login.php:210
-#: template-car-user-profile.php:79 header/header-login.php:55
-#: header/header-login.php:116
-msgid "Username"
-msgstr ""
-
-#: template-car-user-login.php:177
-msgid "Your Email"
-msgstr ""
-
-#: template-car-user-login.php:182
-msgid "A password will be e-mailed you."
-msgstr ""
-
-#: template-car-user-login.php:185 header/header-login.php:97
-msgid "Register"
-msgstr ""
-
-#: template-car-user-login.php:204
-msgid "Log In"
-msgstr ""
-
-#: template-car-user-login.php:214 header/header-login.php:59
-#: header/header-login.php:120
-msgid "Password"
-msgstr ""
-
-#: template-car-user-login.php:219
-msgid "Remember Me"
-msgstr ""
-
-#: template-car-user-login.php:221 header/header-login.php:63
-#: header/header-login.php:124
-msgid "Login"
-msgstr ""
-
-#: template-car-user-login.php:223 header/header-login.php:67
-#: header/header-login.php:128
-msgid "Forgot your password?"
 msgstr ""
 
 #. Name of the template
@@ -609,7 +542,7 @@ msgstr ""
 
 #: template-car-user-profile.php:345
 msgid "Your Profile Data was updated successfully"
-msgstr ""
+msgstr "Uspešno ste promenili podatke"
 
 #: template-car-user-profile.php:348
 msgid "Update Profile"
@@ -1457,13 +1390,6 @@ msgstr ""
 msgid "Staff attributes"
 msgstr ""
 
-#: classes/staff.php:87 header/header-login.php:90
-#: admin/theme_options/helper.php:369
-#: extensions/cardealer/views/data_constructor/data_group_item_template.php:8
-#: extensions/cardealer/views/admin/carlocation.php:144
-msgid "Name"
-msgstr ""
-
 #: classes/staff.php:88
 msgid "Photo"
 msgstr ""
@@ -1709,58 +1635,12 @@ msgstr ""
 msgid "Woo Settings"
 msgstr ""
 
-#: header/header-login.php:7 header/header-login.php:47
-#: header/header-login.php:108
-msgid "Sign In"
-msgstr ""
-
-#: header/header-login.php:34
-msgid "Already a member?"
-msgstr ""
-
-#: header/header-login.php:34
-msgid "Sign in Here"
-msgstr ""
-
-#: header/header-login.php:40
-msgid "Not a member?"
-msgstr ""
-
-#: header/header-login.php:40 header/header-login.php:78
-msgid "Create Account"
-msgstr ""
-
 #: header/header-login.php:50 header/header-login.php:111
 msgid "ERROR"
 msgstr ""
 
 #: header/header-login.php:51 header/header-login.php:112
 msgid "The login/password you entered is incorrect."
-msgstr ""
-
-#: header/header-login.php:159
-#: extensions/cardealer/views/widgets/drive_my_cars.php:15
-msgid "Howdy"
-msgstr ""
-
-#: header/header-login.php:162
-#: extensions/cardealer/views/widgets/drive_my_cars.php:31
-msgid "My profile"
-msgstr ""
-
-#: header/header-login.php:166 extensions/cardealer/classes/car.php:247
-#: extensions/cardealer/classes/car.php:249
-#: extensions/cardealer/views/widgets/drive_my_cars.php:37
-msgid "My Cars"
-msgstr ""
-
-#: header/header-login.php:180 extensions/cardealer/classes/cardealer.php:359
-#: extensions/cardealer/views/widgets/drive_my_cars.php:43
-msgid "Add new car"
-msgstr ""
-
-#: header/header-login.php:183
-msgid "Logout"
 msgstr ""
 
 #: header/header-logo-bar-alternate.php:49
@@ -2128,17 +2008,6 @@ msgstr ""
 #: extensions/authentication/index.php:50
 #: extensions/cardealer/classes/user.php:90
 msgid "Wrong email!"
-msgstr ""
-
-#: extensions/authentication/index.php:85
-msgid "Login details have been emailed to you, please check your mailbox."
-msgstr ""
-
-#: extensions/authentication/index.php:89
-#, php-format
-msgid ""
-"User already exists. Please try different username or process with \"Forgot "
-"your password\" option. <a href=\"%s\">Reset password</a>"
 msgstr ""
 
 #: extensions/authentication/index.php:120
@@ -6282,6 +6151,142 @@ msgstr ""
 msgid "http://themeforest.net/user/ThemeMakers"
 msgstr ""
 
+#: template-car-user-login.php:61
+msgid "Log in"
+msgstr "Prijavi se"
+
+#: template-car-user-login.php:79
+msgid "Restore Password"
+msgstr "Obnovite lozinku"
+
+#: template-car-user-login.php:84
+msgid ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+msgstr ""
+"Molimo Vas unesite korisničko ime ili email adresu. Dobićete email sa linkom "
+"za kreiranje nove lozinke."
+
+#: template-car-user-login.php:87
+msgid "Username or email"
+msgstr "Korisničko ime ili email"
+
+#: template-car-user-login.php:92
+msgid "Reset Password"
+msgstr "Resetujte lozinku"
+
+#: template-car-user-login.php:167
+msgid "Register now for"
+msgstr "Registrujte se sada na"
+
+#: template-car-user-login.php:177
+msgid "Your Email"
+msgstr "Vaš email"
+
+#: template-car-user-login.php:182
+msgid "A password will be e-mailed you."
+msgstr "Lozinka će biti poslata na Vaš e-mail."
+
+#: template-car-user-login.php:204
+msgid "Log In"
+msgstr "Prijava"
+
+#: template-car-user-login.php:219
+msgid "Remember Me"
+msgstr "Zapamti me"
+
+#: template-car-user-login.php:185 header/header-login.php:97
+msgid "Register"
+msgstr "Registrujte se"
+
+#: extensions/authentication/index.php:85
+msgid "Login details have been emailed to you, please check your mailbox."
+msgstr ""
+"Detalji za prijavu su Vam poslati, molimo Vas proverite poštansko sanduče."
+
+#: extensions/authentication/index.php:89
+#, php-format
+msgid ""
+"User already exists. Please try different username or process with \"Forgot "
+"your password\" option. <a href=\"%s\">Reset password</a>"
+msgstr ""
+"Korisnik već postoji. Molimo Vas pokušajte sa drugim korisničkim imenom ili "
+"sa opcijom \"Zaboravljena lozinka\". <a href=\"%s\">Resetujte lozinku</a>"
+
+#: template-car-user-login.php:173 template-car-user-login.php:210
+#: template-car-user-profile.php:79 header/header-login.php:55
+#: header/header-login.php:116
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: template-car-user-login.php:214 header/header-login.php:59
+#: header/header-login.php:120
+msgid "Password"
+msgstr "Lozinka"
+
+#: template-car-user-login.php:221 header/header-login.php:63
+#: header/header-login.php:124
+msgid "Login"
+msgstr "Prijavi se"
+
+#: template-car-user-login.php:223 header/header-login.php:67
+#: header/header-login.php:128
+msgid "Forgot your password?"
+msgstr "Zaboravili ste lozinku?"
+
+#: classes/staff.php:87 header/header-login.php:90
+#: admin/theme_options/helper.php:369
+#: extensions/cardealer/views/data_constructor/data_group_item_template.php:8
+#: extensions/cardealer/views/admin/carlocation.php:144
+msgid "Name"
+msgstr "Korisničko ime"
+
+#: header/header-login.php:7 header/header-login.php:47
+#: header/header-login.php:108
+msgid "Sign In"
+msgstr "Prijavi se"
+
+#: header/header-login.php:34
+msgid "Already a member?"
+msgstr "Postojeći korisnik?"
+
+#: header/header-login.php:34
+msgid "Sign in Here"
+msgstr "Prijavi se ovde"
+
+#: header/header-login.php:40
+msgid "Not a member?"
+msgstr "Novi korisnik?"
+
+#: header/header-login.php:40 header/header-login.php:78
+msgid "Create Account"
+msgstr "Kreiraj nalog"
+
+#: header/header-login.php:159
+#: extensions/cardealer/views/widgets/drive_my_cars.php:15
+msgid "Howdy"
+msgstr "Zdravo"
+
+#: header/header-login.php:162
+#: extensions/cardealer/views/widgets/drive_my_cars.php:31
+msgid "My profile"
+msgstr "Moj profil"
+
+#: header/header-login.php:166 extensions/cardealer/classes/car.php:247
+#: extensions/cardealer/classes/car.php:249
+#: extensions/cardealer/views/widgets/drive_my_cars.php:37
+msgid "My Cars"
+msgstr "Moji viljuškari"
+
+#: header/header-login.php:180 extensions/cardealer/classes/cardealer.php:359
+#: extensions/cardealer/views/widgets/drive_my_cars.php:43
+msgid "Add new car"
+msgstr "Dodaj viljuškar"
+
+#: header/header-login.php:183
+msgid "Logout"
+msgstr "Odjavi se"
+
 #: header/header-login.php:156
 msgid "Profile"
-msgstr ""
+msgstr "Profil"

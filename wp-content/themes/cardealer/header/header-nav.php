@@ -15,7 +15,8 @@
 			'theme_location'  => 'primary',
 			'container'       => '',
 			'fallback_cb'     => 'tmm_wp_page_menu',
-			'container_class' => false
+			'container_class' => false,
+            'hide_menus'      => is_user_logged_in() ? array('registration') : ''
 		)
 	); ?>
 

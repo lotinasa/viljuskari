@@ -157,7 +157,7 @@ if (!empty($alt_title)) {
 				</div>
 				<div class="col-md-4 col-xs-4">
 
-					<?php tmm_breadcrumbs(); ?>
+<!--					--><?php //tmm_breadcrumbs(); ?>
 
 				</div>
 			</div><!--/ .row-->

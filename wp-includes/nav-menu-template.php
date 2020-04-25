@@ -254,7 +254,7 @@ function wp_nav_menu( $args = array() ) {
 
 	$defaults = array( 'menu' => '', 'container' => 'div', 'container_class' => '', 'container_id' => '', 'menu_class' => 'menu', 'menu_id' => '',
 	'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-	'depth' => 0, 'walker' => '', 'theme_location' => '' );
+	'depth' => 0, 'walker' => '', 'theme_location' => '', 'hide_menus' => '' );
 
 	$args = wp_parse_args( $args, $defaults );
 	/**
@@ -361,6 +361,10 @@ function wp_nav_menu( $args = array() ) {
 
 	$sorted_menu_items = $menu_items_with_children = array();
 	foreach ( (array) $menu_items as $menu_item ) {
+	    // Hide menus
+        if (in_array($menu_item->post_name, $args->hide_menus)) {
+            continue;
+        }
 		$sorted_menu_items[ $menu_item->menu_order ] = $menu_item;
 		if ( $menu_item->menu_item_parent )
 			$menu_items_with_children[ $menu_item->menu_item_parent ] = true;
