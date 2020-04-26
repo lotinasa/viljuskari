@@ -893,7 +893,7 @@ class TMM_Helper {
 			?>
 			<label class="sel">
 				<select name="<?php echo $name ?>" id="<?php echo $id ?>"<?php echo ($required == 1) ? ' data-required="1"' : ''; ?>>
-					<option  value=""><?php _e('Svi', 'cardealer'); ?></option>
+					<option  value=""><?php _e('Nonei', 'cardealer'); ?></option>
 					<?php foreach ($terms as $term): ?>
 						<option value="<?php echo $term->term_id ?>" <?php if (in_array($term->term_id, $vals)): ?>selected=""<?php endif; ?>><?php echo $term->name ?></option>
 					<?php endforeach; ?>

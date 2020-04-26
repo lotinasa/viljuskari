@@ -199,7 +199,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 						?>
 
 						<div class="form-heading">
-							<h3><?php the_title() ?></h3>
+                            <h3><?php _e( 'Add New Car Page', 'cardealer' ); ?></h3>
 						</div>
 						<!--/ .form-heading-->
 
@@ -217,22 +217,22 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 						<ul class="cart-items clearfix">
 
 							<li class="step-now cart-title" id="head_step1">
-								<h5 class="cart-title"><?php _e('Osnovno', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Features', 'cardealer'); ?></h5>
 								<span class="circle">1</span>
 							</li>
 
 							<li class="cart-title" id="head_step2">
-								<h5 class="cart-title"><?php _e('Detalji', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Details', 'cardealer'); ?></h5>
 								<span class="circle">2</span>
 							</li>
 
 							<li class="cart-title" id="head_step3">
-								<h5 class="cart-title"><?php _e('Slike/Video', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Photos/Videos', 'cardealer'); ?></h5>
 								<span class="circle">3</span>
 							</li>
 
 							<li class="cart-title" id="head_step4">
-								<h5 class="cart-title"><?php _e('Snimi', 'cardealer'); ?></h5>
+								<h5 class="cart-title"><?php _e('Submit', 'cardealer'); ?></h5>
 								<span class="circle">4</span>
 							</li>
 
@@ -247,14 +247,14 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 									<!-- Car Condition -->
 									<p>
 										<label for="car_state">
-											<strong><?php _e('Stanje mašine', 'cardealer'); ?></strong>
+											<strong><?php _e('Car Condition', 'cardealer'); ?></strong>
 										</label>
 										<select <?php
 										if ($required_car_features['car_state'] == '1') {
 											echo " data-required=1";
 										}
 										?> id="car_state" name="car_state">
-											<option value="0"><?php _e('Sve', 'cardealer'); ?></option>
+											<option value="0"><?php _e('None', 'cardealer'); ?></option>
 											<?php
 											$condition_list = tmm_get_car_condition_list();
 
@@ -267,7 +267,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 									<!-- Car Make and Model -->
 									<p>
 
-										<label for="tax_carproducer"><strong><?php _e('Proizvođač', 'cardealer'); ?></strong></label>
+										<label for="tax_carproducer"><strong><?php _e('Car Make', 'cardealer'); ?></strong></label>
 
 										<?php
 										TMM_Helper::draw_tax_terms_select(
@@ -294,7 +294,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
  -->
 									<!-- Car Body -->
 									<p>
-										<label for="car_body"><strong><?php _e('Tip', 'cardealer'); ?></strong></label>										
+										<label for="car_body"><strong><?php _e('Car Body', 'cardealer'); ?></strong></label>
 										<?php $car_bodies = TMM_Ext_PostType_Car::$car_options['body']; ?>
 
 										<select <?php
@@ -302,7 +302,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											echo " data-required=1";
 										}
 										?> id="car_body" name="car_body">
-											<option value="0"><?php _e('Svi', 'cardealer'); ?></option>
+											<option value="0"><?php _e('Nonei', 'cardealer'); ?></option>
 											<?php foreach ($car_bodies as $body => $body_name): ?>
 												<option value="<?php echo $body ?>"><?php _e($body_name, 'cardealer'); ?></option>
 											<?php endforeach; ?>
@@ -317,9 +317,13 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Car Price -->
 											<p>
-												<label for="car_price"><strong><?php _e('Cena', 'cardealer'); ?>
+												<label for="car_price"><strong><?php _e('Price', 'cardealer'); ?>
 														(<?php echo TMM_Ext_Car_Dealer::$default_currency['symbol'] ?>)</strong></label>
-												<input id="car_price" type="text" name="car_price" placeholder="Na upit">
+												<input <?php
+                                                if ($required_car_features['car_price'] == '1') {
+                                                    echo " data-required=1";
+                                                }
+                                                ?> id="car_price" type="text" name="car_price" placeholder="Na upit">
 											</p>
 
 										</div>
@@ -327,9 +331,9 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Year of First Registration -->
 											<p>
-												<label for="car_year"><strong><?php _e('Godina proizvodnje', 'cardealer'); ?></strong></label>
+												<label for="car_year"><strong><?php _e('Year', 'cardealer'); ?></strong></label>
 												<?php
-												$now = (int) date("Y") + 1;
+												$now = (int) date("Y");
 												$years = array();
 
 												for ($i = $now; $i >= 1900; $i--) {
@@ -345,7 +349,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 													echo " data-required=1";
 												}
 												?> id="car_year" name="car_year">
-													<option value="0"><?php _e('Sve', 'cardealer'); ?></option>
+													<option value="0"><?php _e('None', 'cardealer'); ?></option>
 													<?php foreach ($years as $y): ?>
 														<option <?php echo($car_year == $y ? "selected" : "") ?>
 															value="<?php echo $y ?>"><?php echo $y ?></option>
@@ -361,7 +365,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Fuel Type -->
 											<p>
-												<label for="car_fuel_type"><strong><?php _e('Vrsta pogona', 'cardealer'); ?></strong></label>
+												<label for="car_fuel_type"><strong><?php _e('Fuel Type', 'cardealer'); ?></strong></label>
 												<?php $car_fuel_types = TMM_Ext_PostType_Car::$car_options['fuel_type']; ?>
 
 												<select <?php
@@ -369,7 +373,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 													echo " data-required=1";
 												}
 												?>  id="car_fuel_type" name="car_fuel_type">
-													<option value="0"><?php _e('Svi', 'cardealer'); ?></option>
+													<option value="0"><?php _e('Nonei', 'cardealer'); ?></option>
 													<?php foreach ($car_fuel_types as $fuel => $fuel_name): ?>
 														<option value="<?php echo $fuel ?>"><?php _e($fuel_name, 'cardealer'); ?></option>
 													<?php endforeach; ?>
@@ -381,7 +385,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Mileage -->
 											<p>
-												<label for="car_mileage"><strong><?php _e('Broj radnih sati', 'cardealer'); ?>
+												<label for="car_mileage"><strong><?php _e('Mileage', 'cardealer'); ?>
 <!-- Sasa														(<?php echo tmm_get_car_mileage_unit() ?>) -->
 																(h)</strong></label>
 												<input <?php
@@ -401,13 +405,13 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 									<p>
 										<label
-											for="car_exterior_color"><strong><?php _e('Visina sklopljene mašine do', 'cardealer'); ?></strong></label>
+											for="car_exterior_color"><strong><?php _e('Car Exterior Color', 'cardealer'); ?></strong></label>
 										<select <?php
 										if ($required_car_features['car_exterior_color'] == '1') {
 											echo " data-required=1";
 										}
 										?> id="car_exterior_color" name="car_exterior_color">
-											<option value="0"><?php _e('Sve', 'cardealer'); ?></option>
+											<option value="0"><?php _e('None', 'cardealer'); ?></option>
 											<?php foreach ($car_ext_colors as $color => $color_name): ?>
 												<option value="<?php echo $color ?>"><?php _e($color_name, 'cardealer'); ?></option>
 											<?php endforeach; ?>
@@ -436,12 +440,12 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											<!-- Engine Info -->
 											<p>
 												<label
-													for="car_engine_additional"><strong><?php _e('Oznaka modela', 'cardealer'); ?></strong></label>
+													for="car_engine_additional"><strong><?php _e('Car Engine Additional', 'cardealer'); ?></strong></label>
 												<input <?php
 												if ($required_car_features['car_engine_additional'] == '1') {
 													echo " data-required=1";
 												}
-												?> id="car_engine_additional" type="text" name="car_engine_additional" placeholder="<?php _e('npr: TDI,  ...', 'cardealer'); ?>">
+												?> id="car_engine_additional" type="text" name="car_engine_additional" placeholder="<?php _e('eg: TDi, TSi, Li ...', 'cardealer'); ?>">
 											</p>
 											
 										</div>
@@ -453,14 +457,14 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											?>
 											<p>
 												<label
-													for="car_interrior_color"><strong><?php _e('Nosivost', 'cardealer'); ?>
+													for="car_interrior_color"><strong><?php _e('Car Interior Color', 'cardealer'); ?>
 															(kg)</strong></label>
 												<select <?php
 												if ($required_car_features['car_interrior_color'] == '1') {
 													echo " data-required=1";
 												}
 												?> id="car_interrior_color" name="car_interrior_color">
-													<option value="0"><?php _e('Sve', 'cardealer'); ?></option>
+													<option value="0"><?php _e('None', 'cardealer'); ?></option>
 													<?php foreach ($car_int_colors as $color => $color_name): ?>
 														<option value="<?php echo $color ?>"><?php _e($color_name, 'cardealer'); ?></option>
 													<?php endforeach; ?>
@@ -475,14 +479,14 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Gear Box -->
 											<p>
-												<label for="car_transmission"><strong><?php _e('Tip Prenosa', 'cardealer'); ?></strong></label>
+												<label for="car_transmission"><strong><?php _e('Car Gearbox', 'cardealer'); ?></strong></label>
 												<?php $car_transmissions = TMM_Ext_PostType_Car::$car_options['transmission']; ?>
 												<select <?php
 												if ($required_car_features['car_transmission'] == '1') {
 													echo " data-required=1";
 												}
 												?> id="car_transmission" name="car_transmission">
-													<option value="0"><?php _e('Svi', 'cardealer'); ?></option>
+													<option value="0"><?php _e('Nonei', 'cardealer'); ?></option>
 													<?php foreach ($car_transmissions as $transmission => $transmission_name): ?>
 														<option value="<?php echo $transmission ?>"><?php _e($transmission_name, 'cardealer'); ?></option>
 													<?php endforeach; ?>
@@ -494,14 +498,14 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Door Count -->
 											<p>
-												<label for="car_doors_count"><strong><?php _e('Visina podizanja', 'cardealer'); ?>
+												<label for="car_doors_count"><strong><?php _e('Car Door Count', 'cardealer'); ?>
 														(mm)</strong></label>
 												<select <?php
 												if ($required_car_features['car_doors_count'] == '1') {
 													echo " data-required=1";
 												}
 												?> id="car_doors_count" name="car_doors_count">
-													<option value="0"><?php _e('Sve', 'cardealer'); ?></option>
+													<option value="0"><?php _e('None', 'cardealer'); ?></option>
 													<?php $height_lift = array(); ?>
 													<?php for ($i = 20; $i <= 100; $i++): ?>
 														<?php array_push($height_lift,$i*100); ?>
@@ -558,7 +562,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 									<!-- Car Location -->
 									<p>
 
-										<label for="tax_carlocation1"><strong><?php _e('Lokacija', 'cardealer'); ?></strong></label>
+										<label for="tax_carlocation1"><strong><?php _e('Location', 'cardealer'); ?></strong></label>
 
 										<?php
 										TMM_Ext_Car_Dealer::draw_locations_select(array(
@@ -574,7 +578,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 										<span id="tax_carlocation_container2" class="hide">
 											<label class="sel">
 												<select>
-													<option  value=""><?php _e('Sve', 'cardealer'); ?></option>
+													<option  value=""><?php _e('None', 'cardealer'); ?></option>
 												</select>
 											</label>
 										</span>
@@ -582,7 +586,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 										<span id="tax_carlocation_container3">
 											<label class="sel">
 												<select>
-													<option  value=""><?php _e('Sve', 'cardealer'); ?></option>
+													<option  value=""><?php _e('None', 'cardealer'); ?></option>
 												</select>
 											</label>
 										</span>
@@ -613,7 +617,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 								<!-- Car Description -->
 								<p>
-									<label for="car_adv_desc"><strong><?php _e('Opis mašine / opreme', 'cardealer'); ?></strong> (<?php _e("preostalo karaktera", 'cardealer'); ?> <span id="car_adv_desc_signs_left"><?php echo $max_desc_count; ?></span>)</label>
+									<label for="car_adv_desc"><strong><?php _e('Car Description', 'cardealer'); ?></strong> (<?php _e("signs left", 'cardealer'); ?> <span id="car_adv_desc_signs_left"><?php echo $max_desc_count; ?></span>)</label>
 									<textarea <?php
 							if ($required_car_features['car_adv_desc'] == '1') {
 								echo " data-required=1";
@@ -623,7 +627,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 							</div>
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignright"><?php _e('Sledeći', 'cardealer'); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignright"><?php _e('Next Step', 'cardealer'); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -691,7 +695,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 														<p>
 															<strong><?php _e( $value['name'], 'cardealer' ); ?></strong>
 															<select id="<?php echo $key; ?>" name="tmm_advanced[<?php echo $specification_key ?>][<?php echo $key ?>]">
-																<option value="0"><?php _e( 'Svi', 'cardealer' ); ?></option>
+																<option value="0"><?php _e( 'Nonei', 'cardealer' ); ?></option>
 																<?php foreach ( $value['values'] as $val_key => $val_name ) : ?>
 																	<option value="<?php echo $val_key ?>"><?php _e( $val_name, 'cardealer' ); ?></option>
 																<?php endforeach; ?>
@@ -727,8 +731,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignright"><?php _e( 'Sledeći', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(1);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -751,7 +755,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 								<div class="divider"></div>
 
 								<p>
-									<a class="button orange" id="add_car_video" href="#"><?php _e( 'Dodaj video', 'cardealer' ); ?></a>
+									<a class="button orange" id="add_car_video" href="#"><?php _e( 'Add video', 'cardealer' ); ?></a>
 								</p>
 
 								<ul class="cars-videos" id="cars_videos">
@@ -762,7 +766,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 										</p>
 
 										<p>
-											<a href="#" class="remove_car_video button orange"><?php _e( 'Ukloni', 'cardealer' ); ?></a>
+											<a href="#" class="remove_car_video button orange"><?php _e( 'Remove', 'cardealer' ); ?></a>
 										</p>
 									</li>
 
@@ -773,8 +777,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange alignright"><?php _e( 'Sledeći', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(2);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(4);void(0);" class="button orange alignright"><?php _e( 'Next Step', 'cardealer' ); ?></a>
 
 						</div>
 						<!--/ .cart-content-->
@@ -798,8 +802,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 							</div>
 							<!--/ .section-options-->
 
-							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignleft"><?php _e( 'Prethodni', 'cardealer' ); ?></a>
-							<input type="submit" value="<?php _e( 'Završi unos', 'cardealer' ); ?>" class="button orange alignright"/>
+							<a href="javascript: app_cardealer_app_add_new_car.next_block(3);void(0);" class="button orange alignleft"><?php _e( 'Prev Step', 'cardealer' ); ?></a>
+							<input type="submit" value="<?php _e( 'Complete Submission', 'cardealer' ); ?>" class="button orange alignright"/>
 
 						</div>
 						<!--/ .cart-content-->

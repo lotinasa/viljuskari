@@ -13,7 +13,7 @@ $features = array(
 	'required_car_features[car_carlocation]' => array('title' => __('Car Location', 'cardealer'), 'desc' => __('Set Car Location field as required', 'cardealer'), 'default' => '1', 'disable' => ''),
 	'required_car_features[car_taxonomies]' => array('title' => __('Car Producer', 'cardealer'), 'desc' => __('Set Car Producer field as required', 'cardealer'), 'default' => '1', 'disable' => '1'),
 	'required_car_features[car_model]' => array('title' => __('Car Model', 'cardealer'), 'desc' => __('Set Car Model field as required', 'cardealer'), 'default' => '0', 'disable' => ''),
-	//'required_car_features[car_price]' => array('title' => __('Car Price', 'cardealer'), 'desc' => __('Set Car Price field as required', 'cardealer'), 'default' => '1', 'disable' => ''),
+	'required_car_features[car_price]' => array('title' => __('Car Price', 'cardealer'), 'desc' => __('Set Car Price field as required', 'cardealer'), 'default' => '1', 'disable' => ''),
 	'required_car_features[car_year]' => array('title' => __('Car Year', 'cardealer'), 'desc' => __('Set Car Year field as required', 'cardealer'), 'default' => '1', 'disable' => ''),
 	'required_car_features[car_mileage]' => array('title' => __('Car Mileage', 'cardealer'), 'desc' => __('Set Car Mileage field as required', 'cardealer'), 'default' => '1', 'disable' => ''),
 	'required_car_features[car_vin]' => array('title' => __('Car Vin', 'cardealer'), 'desc' => __('Set Car Vin field as required', 'cardealer'), 'default' => '', 'disable' => ''),
