@@ -1072,6 +1072,10 @@ class WP_List_Table {
 		}
 
 		foreach ( $columns as $column_key => $column_display_name ) {
+            if ($column_key == 'car_engine_size') {
+                continue;
+            }
+
 			$class = array( 'manage-column', "column-$column_key" );
 
 			if ( in_array( $column_key, $hidden ) ) {
@@ -1268,6 +1272,10 @@ class WP_List_Table {
 		list( $columns, $hidden, $sortable, $primary ) = $this->get_column_info();
 
 		foreach ( $columns as $column_name => $column_display_name ) {
+		    if ($column_name == 'car_engine_size') {
+		        continue;
+            }
+
 			$classes = "$column_name column-$column_name";
 			if ( $primary === $column_name ) {
 				$classes .= ' has-row-actions column-primary';

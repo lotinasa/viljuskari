@@ -91,12 +91,14 @@ foreach ( $car_photos as $source_url ) {
     }
 }
 
-$car_engine = tmm_get_car_engine($post_id, '-', true, ' ');
-$car_fuel_type = tmm_get_car_option('fuel_type', $post_id);
+//$car_engine = tmm_get_car_engine($post_id, '-', true, ' ');
+//$car_fuel_type = tmm_get_car_option('fuel_type', $post_id);
+//
+//if($car_engine !== '-' && $car_fuel_type){
+//	$car_engine .= ', ' . $car_fuel_type;
+//}
 
-if($car_engine !== '-' && $car_fuel_type){
-	$car_engine .= ', ' . $car_fuel_type;
-}
+$car_interrior_color = tmm_get_car_option('interrior_color' , $post_id);
 
 ?>
 
@@ -231,7 +233,7 @@ if($car_engine !== '-' && $car_fuel_type){
             </li>
 
             <li>
-                <b><?php _e('Engine', 'cardealer'); ?>:</b><span>&nbsp;<?php echo $car_engine; ?></span>
+                <b><?php _e('Car Interior Color', 'cardealer'); ?>:</b><span>&nbsp;<?php echo $car_interrior_color; ?></span>
             </li>
 
             <li>

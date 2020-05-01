@@ -133,7 +133,7 @@ if (!function_exists('tmm_get_car_mileage')) {
 		$mileage = (int) tmm_get_car_option('mileage', $post_id);
 
 		if (!empty($mileage)) {
-			$mileage = $mileage . ' ' . tmm_get_car_mileage_unit();
+//			$mileage = $mileage . ' ' . tmm_get_car_mileage_unit();
 		} else {
 			return $placeholder;
 		}

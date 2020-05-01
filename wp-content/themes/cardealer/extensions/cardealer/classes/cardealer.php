@@ -91,6 +91,7 @@ class TMM_Ext_Car_Dealer {
 		$options['distance_units'] = array(
 			'km' => __("km", 'cardealer'),
 			'miles' => __("miles", 'cardealer'),
+			'hours' => __("h", 'cardealer')
 		);
 
 		$options['engine_capacity_units'] = array(
