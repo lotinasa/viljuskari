@@ -387,7 +387,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											<p>
 												<label for="car_mileage"><strong><?php _e('Mileage', 'cardealer'); ?>
 <!-- Sasa														(<?php echo tmm_get_car_mileage_unit() ?>) -->
-																(h)</strong></label>
+																</strong></label>
 												<input <?php
 												if ($required_car_features['car_mileage'] == '1') {
 													echo " data-required=1";
@@ -458,7 +458,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 											<p>
 												<label
 													for="car_interrior_color"><strong><?php _e('Car Interior Color', 'cardealer'); ?>
-															(kg)</strong></label>
+                                                    </strong></label>
 												<select <?php
 												if ($required_car_features['car_interrior_color'] == '1') {
 													echo " data-required=1";
@@ -498,8 +498,7 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 
 											<!-- Door Count -->
 											<p>
-												<label for="car_doors_count"><strong><?php _e('Car Door Count', 'cardealer'); ?>
-														(mm)</strong></label>
+												<label for="car_doors_count"><strong><?php _e('Car Door Count', 'cardealer'); ?></strong></label>
 												<select <?php
 												if ($required_car_features['car_doors_count'] == '1') {
 													echo " data-required=1";
