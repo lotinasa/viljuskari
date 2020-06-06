@@ -249,10 +249,12 @@ get_header();
 				<h6 class="section-title"><?php _e( 'Technical data', 'cardealer' ); ?>:</h6>
 
 				<ul class="data-list">
+<!-- Sasa
 					<?php if ( $car_vin ) { ?>
 						<li><?php _e( 'VIN', 'cardealer' ); ?>:</li>
 						<li class="vin"><?php echo esc_html( $car_vin ); ?></li>
 					<?php } ?>
+-->
 					<?php if ( $car_year ) { ?>
 						<li><?php _e( 'YOR', 'cardealer' ); ?>:</li>
 						<li><?php echo esc_html( $car_year ); ?></li>
@@ -261,10 +263,12 @@ get_header();
 						<li><?php _e( 'Mileage', 'cardealer' ); ?>:</li>
 						<li><?php echo esc_html( $car_mileage ); ?></li>
 					<?php } ?>
+<!-- Sasa
 					<?php if ( $car_engine ) { ?>
 						<li><?php _e( 'Engine Size', 'cardealer' ); ?>:</li>
 						<li><?php echo $car_engine; ?></li>
 					<?php } ?>
+-->
 					<?php if ( $car_engine_additional ) { ?>
 						<li><?php _e( 'Engine Type', 'cardealer' ); ?>:</li>
 						<li class="engine-type"><?php echo esc_html( $car_engine_additional ); ?></li>
@@ -279,7 +283,7 @@ get_header();
 					<?php } ?>
 					<?php if ( $car_body ) { ?>
 						<li><?php _e( 'Body Style', 'cardealer' ); ?>:</li>
-						<li class="body-style"><?php echo esc_html( $car_body ); ?></li>
+						<li><?php echo esc_html( $car_body ); ?></li>
 					<?php } ?>
 					<?php if ( $car_doors_count ) { ?>
 						<li><?php _e( 'Doors', 'cardealer' ); ?>:</li>
@@ -293,10 +297,12 @@ get_header();
 						<li><?php _e( 'Ext Color', 'cardealer' ); ?>:</li>
 						<li><?php echo esc_html( $car_exterior_color ); ?></li>
 					<?php } ?>
+<!-- Sasa
 					<?php if ( $car_owner_number ) { ?>
 						<li><?php _e( 'Owners', 'cardealer' ); ?>:</li>
 						<li><?php echo esc_html( $car_owner_number ); ?></li>
 					<?php } ?>
+-->
 					<?php if ( $car_condition ) { ?>
 						<li><?php _e( 'Condition', 'cardealer' ); ?>:</li>
 						<li><?php echo esc_html( $car_condition ); ?></li>
@@ -309,9 +315,9 @@ get_header();
 
 				<ul class="data-list">
 					<li><?php _e( 'Published', 'cardealer' ); ?>:</li>
-					<li><?php echo get_the_date( 'M d, Y' ) ?></li>
+					<li><?php echo get_the_date( 'd.m.Y' ) ?></li>
 					<li><?php _e( 'Updated', 'cardealer' ); ?>:</li>
-					<li><?php echo the_modified_date( 'M d, Y' ) ?></li>
+					<li><?php echo the_modified_date( 'd.m.Y' ) ?></li>
 					<li><?php _e( 'Views', 'cardealer' ); ?>:</li>
 					<li><?php echo TMM_Ext_PostType_Car::update_post_view_count( $post->ID ) ?></li>
 				</ul>

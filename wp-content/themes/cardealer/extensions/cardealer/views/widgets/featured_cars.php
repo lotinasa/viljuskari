@@ -69,9 +69,9 @@ global $post;
 
 						<p class="specs">
 							<?php
-							if(!empty($car_data['car_engine_size'])){
-								echo $car_data['car_engine_size'] . tmm_get_car_engine_unit() . ' ';
-								if(!empty($car_data['car_mileage'])){
+							if(!empty($car_data['car_interior_color'])){
+								echo $car_data['car_interior_color'] . tmm_get_car_engine_unit() . ' ';
+								if(!empty($car_data['car_interior_color'])){
 									echo ', ';
 								}
 							}

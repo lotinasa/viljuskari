@@ -67,12 +67,12 @@ global $post;
 
 						<p class="specs">
 							<?php
-							if(!empty($car_data['car_engine_size'])){
-								echo $car_data['car_engine_size'] . tmm_get_car_engine_unit() . ' ';
-								if(!empty($car_data['car_mileage'])){
-									echo ', ';
-								}
-							}
+                            if(!empty($car_data['car_interior_color'])){
+                                echo $car_data['car_interior_color'] . tmm_get_car_engine_unit() . ' ';
+                                if(!empty($car_data['car_interior_color'])){
+                                    echo ', ';
+                                }
+                            }
 							if(!empty($car_data['car_mileage'])){
 								echo $car_data['car_mileage'] . tmm_get_car_mileage_unit();
 							}

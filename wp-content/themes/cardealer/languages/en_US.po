@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cardealer\n"
 "POT-Creation-Date: 2016-11-20 14:55+0000\n"
-"PO-Revision-Date: 2020-05-02 19:59+0000\n"
+"PO-Revision-Date: 2020-06-06 14:47+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -33,15 +33,6 @@ msgstr ""
 msgid "Get me back to homepage!"
 msgstr ""
 
-#: content.php:48 content-alternate.php:35 functions.php:473 single.php:15
-#: extensions/cardealer/classes/car.php:858
-msgid "Date"
-msgstr ""
-
-#: content.php:59 functions.php:476 single.php:18
-msgid "Author"
-msgstr ""
-
 #: content.php:62 single.php:21
 msgid "<b>Tags</b>"
 msgstr ""
@@ -54,28 +45,12 @@ msgstr ""
 msgid "comments"
 msgstr ""
 
-#: single-car.php:69
-msgid "Print this Ad"
-msgstr ""
-
-#: single-car.php:162 extensions/cardealer/views/admin/car_attributes.php:288
-msgid "Videos"
-msgstr "Video"
-
 #: single-car.php:232 single.php:80
 msgid "Social Shares"
 msgstr ""
 
-#: single-car.php:249
-msgid "Technical data"
-msgstr ""
-
 #: single-car.php:253 extensions/cardealer/views/admin/car_attributes.php:602
 msgid "VIN"
-msgstr ""
-
-#: single-car.php:257 template-car-listing.php:286
-msgid "YOR"
 msgstr ""
 
 #: single-car.php:265 template-car-add-new.php:489
@@ -85,87 +60,12 @@ msgstr ""
 msgid "Engine Size"
 msgstr ""
 
-#: single-car.php:269
-msgid "Engine Type"
-msgstr ""
-
-#: single-car.php:273 template-car-compare.php:38 template-car-compare.php:129
-#: extensions/cardealer/views/widgets/quicksearch_form.php:155
-#: extensions/cardealer/views/admin/car_attributes.php:472
-msgid "Gearbox"
-msgstr "Tip Prenosa"
-
-#: single-car.php:277
-msgid "Fuel"
-msgstr ""
-
-#: single-car.php:281
-msgid "Body Style"
-msgstr ""
-
-#: single-car.php:285
-msgid "Doors"
-msgstr ""
-
-#: single-car.php:289
-msgid "Int Color"
-msgstr ""
-
-#: single-car.php:293
-msgid "Ext Color"
-msgstr ""
-
 #: single-car.php:297 template-car-compare.php:41 template-car-compare.php:138
 msgid "Owners"
 msgstr ""
 
-#: single-car.php:308
-#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:712
-msgid "Public Info"
-msgstr ""
-
-#: single-car.php:311
-msgid "Published"
-msgstr ""
-
-#: single-car.php:313 admin/options.php:227
-msgid "Updated"
-msgstr ""
-
-#: single-car.php:315
-msgid "Views"
-msgstr ""
-
-#: single-car.php:328
-msgid "Additional Info"
-msgstr ""
-
-#: single-car.php:421
-msgid "Contact Dealer"
-msgstr ""
-
-#: single-car.php:435
-#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:413
-msgid "Dealers page"
-msgstr ""
-
 #: single-car.php:438
 msgid "Dealers RSS"
-msgstr ""
-
-#: single-car.php:449 template-car-user-dealer.php:95
-#: extensions/cardealer/classes/user.php:73
-#: admin/views/widgets/visit_card_form.php:13
-#: admin/views/widgets/visit_card.php:22
-#: admin/views/widgets/contacts_bar_form.php:13
-#: extensions/cardealer/views/widgets/dealer_contacts.php:39
-msgid "Phone"
-msgstr ""
-
-#: single-car.php:454 template-car-user-dealer.php:99 template-staff.php:102
-#: extensions/cardealer/classes/user.php:74
-#: extensions/cardealer/views/widgets/dealer_contacts.php:45
-msgid "Mobile"
 msgstr ""
 
 #: single-car.php:459 template-car-user-dealer.php:103 template-staff.php:103
@@ -178,11 +78,6 @@ msgstr ""
 
 #: single-car.php:479
 msgid "Private Message to Dealer"
-msgstr ""
-
-#: single-car.php:498
-#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:770
-msgid "Similar Vehicles"
 msgstr ""
 
 #: single-car.php:521 single.php:145
@@ -248,18 +143,8 @@ msgstr ""
 msgid "-Theme Blog Alternate"
 msgstr ""
 
-#: comments.php:34
-#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:819
-msgid "Comments"
-msgstr ""
-
 #. Name of the template
 msgid "Dealer Page"
-msgstr ""
-
-#: template-car-user-dealer.php:83
-#: extensions/cardealer/views/widgets/dealer_contacts.php:27
-msgid "Contact Person"
 msgstr ""
 
 #: template-car-user-dealer.php:120 template-staff.php:104 functions.php:425
@@ -278,17 +163,13 @@ msgstr ""
 msgid "Skype"
 msgstr ""
 
-#: template-car-user-dealer.php:131 functions.php:427
-msgid "Website"
-msgstr ""
-
 #: template-car-user-dealer.php:150
 msgid "Location on Map"
 msgstr ""
 
 #: template-car-user-dealer.php:164
 msgid "Latest dealers cars"
-msgstr ""
+msgstr "Poslednje dodati viljuškari "
 
 #. Name of the template
 msgid "-Theme Staff Page"
@@ -318,7 +199,7 @@ msgstr ""
 
 #: template-car-watch-list.php:33
 msgid "Ooops, You have not added any ad to your watch list yet!"
-msgstr ""
+msgstr "Ooops, Niste dodali nijedan oglas u listu želja!"
 
 #. Name of the template
 msgid "Login Page"
@@ -360,10 +241,6 @@ msgstr ""
 msgid "Edit Car"
 msgstr ""
 
-#: template-car-edit.php:54
-msgid "Update Vehicle"
-msgstr "Sačuvajte izmene"
-
 #. Name of the template
 msgid "Car Listings"
 msgstr ""
@@ -390,11 +267,11 @@ msgstr ""
 
 #: article-car.php:307 extensions/cardealer/classes/cardealer.php:364
 msgid "Compare"
-msgstr ""
+msgstr "Uporedi"
 
 #: article-car.php:315 extensions/cardealer/classes/cardealer.php:365
 msgid "Watch list"
-msgstr ""
+msgstr "Lista želja"
 
 #: functions.php:118
 msgid "Thememakers Default Sidebar"
@@ -442,11 +319,11 @@ msgstr ""
 
 #: functions.php:371
 msgid "Selected car was successfully added to your compare list."
-msgstr ""
+msgstr "Izabrani viljuškar je uspešno dodat u listu za poređenje."
 
 #: functions.php:372
 msgid "Selected car was successfully removed from your compare list."
-msgstr ""
+msgstr "Izabrani viljuškar je uspešno uklonjen iz liste za poređenje."
 
 #: functions.php:373
 msgid "Selected car was successfully added to your watch list."
@@ -476,7 +353,7 @@ msgstr ""
 
 #: functions.php:379 admin/options.php:207
 msgid "Please fill all required fields!"
-msgstr ""
+msgstr "Molimo Vas popunite sva obavezna polja"
 
 #: functions.php:380
 msgid "Wrong Username!"
@@ -528,28 +405,12 @@ msgstr ""
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:430
-msgid "Your Message"
-msgstr ""
-
 #: functions.php:436
 msgid "Cancel reply"
 msgstr ""
 
-#: functions.php:438
-msgid "Leave a Comment"
-msgstr ""
-
 #: functions.php:468
 msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: functions.php:473
-msgid "at"
-msgstr ""
-
-#: functions.php:482
-msgid "Reply"
 msgstr ""
 
 #: functions.php:589 helper/helper.php:508
@@ -572,10 +433,6 @@ msgstr ""
 #. Name of the template
 msgid "Users Cars"
 msgstr ""
-
-#: template-car-user-cars.php:36
-msgid "Thank you! Your changes were successfully applied to your car."
-msgstr "Hvala! Vaše izmene su uspešno sačuvane."
 
 #: template-car-user-cars.php:43
 msgid "Thank you! Your car was successfully added."
@@ -691,11 +548,6 @@ msgstr ""
 msgid "You posted %d cars. To post more you should"
 msgstr ""
 
-#: template-car-add-new.php:505
-#: extensions/cardealer/views/admin/car_attributes.php:618
-msgid "Engine Info"
-msgstr "Oznaka modela"
-
 #: template-car-add-new.php:521
 msgid "Car VIN"
 msgstr ""
@@ -723,14 +575,6 @@ msgstr ""
 #: template-car-add-new.php:748
 #: extensions/cardealer/views/admin/car_attributes.php:309
 msgid "http://www.youtube.com, http://vimeo.com"
-msgstr ""
-
-#: template-car-add-new.php:774
-msgid "Terms and Conditions"
-msgstr ""
-
-#: template-car-add-new.php:781
-msgid "I agree to the terms and conditions."
 msgstr ""
 
 #: content-header.php:73
@@ -2015,10 +1859,6 @@ msgstr ""
 msgid "Users id's"
 msgstr ""
 
-#: extensions/cardealer/classes/car.php:617
-msgid "You have marked this car as featured"
-msgstr ""
-
 #: extensions/cardealer/classes/car.php:618
 msgid "You have unmarked this car as featured"
 msgstr ""
@@ -2199,10 +2039,6 @@ msgstr ""
 
 #: extensions/cardealer/classes/cardealer.php:367
 msgid "PayPal Transaction Failed"
-msgstr ""
-
-#: extensions/cardealer/classes/cardealer.php:403
-msgid "Your message"
 msgstr ""
 
 #: extensions/cardealer/classes/cardealer.php:410
@@ -2869,14 +2705,6 @@ msgstr ""
 msgid "Calculate"
 msgstr ""
 
-#: extensions/cardealer/views/widgets/dealer_contacts.php:21
-msgid "Dealer name"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/dealer_contacts.php:69
-msgid "Site"
-msgstr ""
-
 #: extensions/cardealer/views/widgets/car_counter.php:48
 msgid "within hour"
 msgstr ""
@@ -2899,13 +2727,6 @@ msgstr ""
 
 #: extensions/cardealer/views/widgets/car_counter_form.php:38
 msgid "Display \"Added cars total\" cell"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/recent_cars.php:102
-#: extensions/cardealer/views/widgets/dealers.php:147
-#: extensions/cardealer/views/widgets/cars.php:139
-#: extensions/cardealer/views/widgets/featured_cars.php:104
-msgid "All Cars"
 msgstr ""
 
 #: extensions/cardealer/views/widgets/dealer_contacts_form.php:17
@@ -3099,16 +2920,8 @@ msgstr ""
 msgid "Year Range"
 msgstr ""
 
-#: extensions/cardealer/views/widgets/quicksearch_form.php:145
-msgid "Fuel type"
-msgstr ""
-
 #: extensions/cardealer/views/widgets/quicksearch_form.php:167
 msgid "Body type"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/quicksearch_form.php:178
-msgid "Doors count"
 msgstr ""
 
 #: extensions/cardealer/views/widgets/quicksearch_form.php:189
@@ -3249,14 +3062,6 @@ msgstr ""
 msgid "Update Location"
 msgstr ""
 
-#: extensions/cardealer/views/admin/car_attributes.php:279
-msgid "Edit Videos"
-msgstr "Uredi video"
-
-#: extensions/cardealer/views/admin/car_attributes.php:328
-msgid "Edit Vehicle Make, Model, Technical Data, Location and Description"
-msgstr "Izmenite proizvođača, tip, tehničke podatke, lokaciju, opis, ..."
-
 #: extensions/cardealer/views/admin/car_attributes.php:374
 msgid "Model"
 msgstr ""
@@ -3264,22 +3069,6 @@ msgstr ""
 #: extensions/cardealer/views/admin/car_attributes.php:416
 msgid "A value of zero will be displayed as Negotiable"
 msgstr ""
-
-#: extensions/cardealer/views/admin/car_attributes.php:450
-msgid "Interior Color"
-msgstr "Nosivost (kg)"
-
-#: extensions/cardealer/views/admin/car_attributes.php:537
-msgid "Exterior Color"
-msgstr "Visina sklopljene mašine do"
-
-#: extensions/cardealer/views/admin/car_attributes.php:559
-msgid "Door Count"
-msgstr "Visina podizanja (mm)"
-
-#: extensions/cardealer/views/admin/car_attributes.php:722
-msgid "Feature Sets"
-msgstr "Dodatni podaci"
 
 #: extensions/cardealer/views/admin/features_packet.php:3
 #: extensions/cardealer/views/admin/settings/sections/tab_data_constructor/custom_html/data_constructor.php:90
@@ -3433,10 +3222,6 @@ msgstr ""
 #: extensions/cardealer/js/jquery-file-upload/dealer_logo.php:59
 msgid "Start"
 msgstr ""
-
-#: extensions/cardealer/js/jquery-file-upload/cars_upload.php:139
-msgid "Set main image"
-msgstr "Izaberite glavnu sliku"
 
 #: extensions/cardealer/js/jquery-file-upload/cars_upload.php:162
 #: extensions/cardealer/js/jquery-file-upload/dealer_logo.php:82
@@ -5660,6 +5445,221 @@ msgstr ""
 msgid "http://themeforest.net/user/ThemeMakers"
 msgstr ""
 
+#: content.php:48 content-alternate.php:35 functions.php:473 single.php:15
+#: extensions/cardealer/classes/car.php:858
+msgid "Date"
+msgstr "Datum"
+
+#: content.php:59 functions.php:476 single.php:18
+msgid "Author"
+msgstr "Autor"
+
+#: single-car.php:269
+msgid "Engine Type"
+msgstr "Oznaka modela"
+
+#: single-car.php:277
+msgid "Fuel"
+msgstr "Vrsta pogona"
+
+#: single-car.php:281
+msgid "Body Style"
+msgstr "Tip"
+
+#: single-car.php:285
+msgid "Doors"
+msgstr "Visina podizanja (mm)"
+
+#: single-car.php:293
+msgid "Ext Color"
+msgstr "Visina sklopljene mašine do"
+
+#: single-car.php:308
+#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:712
+msgid "Public Info"
+msgstr "Opšti podaci"
+
+#: single-car.php:311
+msgid "Published"
+msgstr "Objavljeno"
+
+#: single-car.php:313 admin/options.php:227
+msgid "Updated"
+msgstr "Izmenjeno"
+
+#: single-car.php:315
+msgid "Views"
+msgstr "Pregleda"
+
+#: single-car.php:328
+msgid "Additional Info"
+msgstr "Dodatni podaci"
+
+#: single-car.php:421
+msgid "Contact Dealer"
+msgstr "Kontakt osoba"
+
+#: single-car.php:435
+#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:413
+msgid "Dealers page"
+msgstr "Strana prodavca"
+
+#: single-car.php:498
+#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:770
+msgid "Similar Vehicles"
+msgstr "Slični viljuškari"
+
+#: comments.php:34
+#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:819
+msgid "Comments"
+msgstr "Komentara"
+
+#: template-car-user-dealer.php:131 functions.php:427
+msgid "Website"
+msgstr "Web stranica"
+
+#: functions.php:430
+msgid "Your Message"
+msgstr "Vaša poruka"
+
+#: functions.php:438
+msgid "Leave a Comment"
+msgstr "Ostavite komentar"
+
+#: functions.php:473
+msgid "at"
+msgstr "u"
+
+#: functions.php:482
+msgid "Reply"
+msgstr "Odgovori"
+
+#: template-car-add-new.php:774
+msgid "Terms and Conditions"
+msgstr "Uslovi oglašavanja"
+
+#: template-car-add-new.php:781
+msgid "I agree to the terms and conditions."
+msgstr "Slažem se sa uslovima oglašavanja"
+
+#: extensions/cardealer/classes/cardealer.php:403
+msgid "Your message"
+msgstr "Vaša poruka"
+
+#: extensions/cardealer/views/widgets/quicksearch_form.php:145
+msgid "Fuel type"
+msgstr "Vrsta pogona"
+
+#: extensions/cardealer/views/widgets/quicksearch_form.php:178
+msgid "Doors count"
+msgstr "Visina podizanja (mm)"
+
+#: single-car.php:69
+msgid "Print this Ad"
+msgstr "Štampaj ovaj oglas"
+
+#: single-car.php:249
+msgid "Technical data"
+msgstr "Tehnički podaci"
+
+#: single-car.php:257 template-car-listing.php:286
+msgid "YOR"
+msgstr "Godina proizvodnje"
+
+#: single-car.php:289
+msgid "Int Color"
+msgstr "Nosivost (kg)"
+
+#: single-car.php:449 template-car-user-dealer.php:95
+#: extensions/cardealer/classes/user.php:73
+#: admin/views/widgets/visit_card_form.php:13
+#: admin/views/widgets/visit_card.php:22
+#: admin/views/widgets/contacts_bar_form.php:13
+#: extensions/cardealer/views/widgets/dealer_contacts.php:39
+msgid "Phone"
+msgstr "Telefon"
+
+#: single-car.php:454 template-car-user-dealer.php:99 template-staff.php:102
+#: extensions/cardealer/classes/user.php:74
+#: extensions/cardealer/views/widgets/dealer_contacts.php:45
+msgid "Mobile"
+msgstr "Mobilni"
+
+#: template-car-user-dealer.php:83
+#: extensions/cardealer/views/widgets/dealer_contacts.php:27
+msgid "Contact Person"
+msgstr "Kontakt osoba"
+
+#: extensions/cardealer/classes/car.php:617
+msgid "You have marked this car as featured"
+msgstr "Obeležili ste viljuškar kao istaknuti"
+
+#: extensions/cardealer/views/widgets/dealer_contacts.php:21
+msgid "Dealer name"
+msgstr "Ime prodavca"
+
+#: extensions/cardealer/views/widgets/dealer_contacts.php:69
+msgid "Site"
+msgstr "Web"
+
+#: extensions/cardealer/views/widgets/recent_cars.php:102
+#: extensions/cardealer/views/widgets/dealers.php:147
+#: extensions/cardealer/views/widgets/cars.php:139
+#: extensions/cardealer/views/widgets/featured_cars.php:104
+msgid "All Cars"
+msgstr "Svi viljuškari"
+
+#: single-car.php:162 extensions/cardealer/views/admin/car_attributes.php:288
+msgid "Videos"
+msgstr "Video"
+
+#: single-car.php:273 template-car-compare.php:38 template-car-compare.php:129
+#: extensions/cardealer/views/widgets/quicksearch_form.php:155
+#: extensions/cardealer/views/admin/car_attributes.php:472
+msgid "Gearbox"
+msgstr "Tip Prenosa"
+
+#: template-car-edit.php:54
+msgid "Update Vehicle"
+msgstr "Sačuvajte izmene"
+
+#: template-car-user-cars.php:36
+msgid "Thank you! Your changes were successfully applied to your car."
+msgstr "Hvala! Vaše izmene su uspešno sačuvane."
+
+#: template-car-add-new.php:505
+#: extensions/cardealer/views/admin/car_attributes.php:618
+msgid "Engine Info"
+msgstr "Oznaka modela"
+
+#: extensions/cardealer/views/admin/car_attributes.php:279
+msgid "Edit Videos"
+msgstr "Uredi video"
+
+#: extensions/cardealer/views/admin/car_attributes.php:328
+msgid "Edit Vehicle Make, Model, Technical Data, Location and Description"
+msgstr "Izmenite proizvođača, tip, tehničke podatke, lokaciju, opis, ..."
+
+#: extensions/cardealer/views/admin/car_attributes.php:450
+msgid "Interior Color"
+msgstr "Nosivost (kg)"
+
+#: extensions/cardealer/views/admin/car_attributes.php:537
+msgid "Exterior Color"
+msgstr "Visina sklopljene mašine do"
+
+#: extensions/cardealer/views/admin/car_attributes.php:559
+msgid "Door Count"
+msgstr "Visina podizanja (mm)"
+
+#: extensions/cardealer/views/admin/car_attributes.php:722
+msgid "Feature Sets"
+msgstr "Dodatni podaci"
+
+#: extensions/cardealer/js/jquery-file-upload/cars_upload.php:139
+msgid "Set main image"
+msgstr "Izaberite glavnu sliku"
+
 #: single-car.php:143 article-car.php:140 article-car.php:161
 #: article-car.php:175 article-car.php:259
 #: extensions/cardealer/classes/car.php:855
@@ -5673,7 +5673,7 @@ msgstr "Prodato"
 #: article-car.php:242 extensions/cardealer/classes/cardealer.php:33
 #: extensions/cardealer/views/admin/car_attributes.php:338
 msgid "Condition"
-msgstr "Stanje"
+msgstr "Stanje mašine"
 
 #: template-car-compare.php:35 template-car-compare.php:120
 #: extensions/cardealer/views/admin/car_attributes.php:393
@@ -5948,7 +5948,7 @@ msgstr "Izaberite logo ..."
 
 #: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:607
 msgid "Add New Car Page"
-msgstr "Dodaj novi viljuškar"
+msgstr "Dodajte novi viljuškar"
 
 #: template-car-add-new.php:281
 #: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:15
@@ -6126,7 +6126,7 @@ msgstr "Opis mašine / opreme"
 #: template-car-add-new.php:741
 #: extensions/cardealer/views/admin/car_attributes.php:292
 msgid "Add video"
-msgstr "Dodaj video"
+msgstr "Dodajte video"
 
 #: template-car-add-new.php:789
 msgid "Complete Submission"
@@ -6281,11 +6281,11 @@ msgstr "Moji viljuškari"
 #: header/header-login.php:180 extensions/cardealer/classes/cardealer.php:359
 #: extensions/cardealer/views/widgets/drive_my_cars.php:43
 msgid "Add new car"
-msgstr "Dodaj viljuškar"
+msgstr "Dodajte viljuškar"
 
 #: header/header-login.php:183
 msgid "Logout"
-msgstr "Odjavi se"
+msgstr "Odjavite se"
 
 #: header/header-login.php:156
 msgid "Profile"

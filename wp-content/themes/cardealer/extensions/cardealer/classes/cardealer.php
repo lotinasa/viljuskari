@@ -97,6 +97,7 @@ class TMM_Ext_Car_Dealer {
 		$options['engine_capacity_units'] = array(
 			'L' => __("L", 'cardealer'),
 			'cm<sup>3</sup>' => __("cm<sup>3</sup>", 'cardealer'),
+            'kg'
 		);
 
 		$options['min_doors_count'] = 2;
