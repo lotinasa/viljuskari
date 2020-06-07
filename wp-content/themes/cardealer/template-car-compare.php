@@ -33,12 +33,12 @@ $car_compare_list = TMM_Ext_PostType_Car::get_compare_list();
 				<li><?php _e('Price', 'cardealer'); ?></li>
 				<li><?php _e('Condition', 'cardealer'); ?></li>
 				<li><?php _e('Body Type', 'cardealer'); ?></li>
-				<li><?php _e('Engine', 'cardealer'); ?></li>
+				<li><?php _e('Car Interior Color', 'cardealer'); ?></li>
 				<li><?php _e('Fuel Type', 'cardealer'); ?></li>
 				<li><?php _e('Gearbox', 'cardealer'); ?></li>
 				<li><?php _e('Mileage', 'cardealer'); ?></li>
 				<li><?php _e('Year', 'cardealer'); ?></li>
-				<li><?php _e('Owners', 'cardealer'); ?></li>
+<!--				<li>--><?php //_e('Owners', 'cardealer'); ?><!--</li>-->
 				<?php if (!empty(TMM_Ext_PostType_Car::$specifications_array)): ?>
 
 					<?php foreach (TMM_Ext_PostType_Car::$specifications_array as $specification_key => $value) : ?>
@@ -94,6 +94,7 @@ $car_compare_list = TMM_Ext_PostType_Car::get_compare_list();
                                     <?php
                                     if (!empty($car_data['car_carlocation'][0])) {
                                         $car_carlocation = TMM_Ext_PostType_Car::get_location_string($car_data['car_carlocation']);
+//                                        echo substr($car_carlocation, strripos($car_carlocation, '/') + 1);
                                         echo $car_carlocation;
                                     }
                                     ?>
@@ -120,8 +121,8 @@ $car_compare_list = TMM_Ext_PostType_Car::get_compare_list();
                             <li data-feature="<?php _e('Body Type', 'cardealer'); ?>">
 	                            <?php echo esc_html( tmm_get_car_option('body', $post_id) ); ?>
                             </li>
-                            <li data-feature="<?php _e('Engine', 'cardealer'); ?>">
-	                            <?php echo tmm_get_car_engine($post_id, '', true); ?>
+                            <li data-feature="<?php _e('Car Interior Color', 'cardealer'); ?>">
+                                <?php echo esc_html( tmm_get_car_option('interior_color', $post_id) ); ?>
                             </li>
                             <li data-feature="<?php _e('Fuel Type', 'cardealer'); ?>">
 	                            <?php echo esc_html( tmm_get_car_option('fuel_type', $post_id) ); ?>
@@ -135,10 +136,11 @@ $car_compare_list = TMM_Ext_PostType_Car::get_compare_list();
                             <li data-feature="<?php _e('Year', 'cardealer'); ?>">
 	                            <?php echo esc_html( tmm_get_car_option('year', $post_id) ); ?>
                             </li>
+<!-- Sasa
                             <li data-feature="<?php _e('Owners', 'cardealer'); ?>">
 	                            <?php echo esc_html( tmm_get_car_option('owner_number', $post_id) ); ?>
                             </li>
-
+-->
                             <?php if (!empty(TMM_Ext_PostType_Car::$specifications_array)) { ?>
                                 <?php foreach (TMM_Ext_PostType_Car::$specifications_array as $specification_key => $value) { ?>
                                     <?php $attributes_array = TMM_Ext_PostType_Car::get_attribute_constructors($specification_key); ?>

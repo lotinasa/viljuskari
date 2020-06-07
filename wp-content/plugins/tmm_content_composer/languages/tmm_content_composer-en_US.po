@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ThemeMakers Visual Content Composer\n"
 "POT-Creation-Date: 2016-10-24 22:28+0200\n"
-"PO-Revision-Date: 2020-04-19 19:12+0000\n"
+"PO-Revision-Date: 2020-06-07 18:02+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -1084,106 +1084,75 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: views/shortcodes/cardealer/quicksearch.php:137
-#: views/shortcodes/cardealer/quicksearch.php:171
-#: views/shortcodes/cardealer/quicksearch.php:180
-#: views/shortcodes/cardealer/quicksearch.php:204
-#: views/shortcodes/cardealer/quicksearch.php:239
-#: views/shortcodes/cardealer/quicksearch.php:247
-#: views/shortcodes/cardealer/quicksearch.php:301
-#: views/shortcodes/cardealer/quicksearch.php:318
-#: views/shortcodes/cardealer/quicksearch.php:378
-#: views/shortcodes/cardealer/quicksearch.php:395
-#: views/shortcodes/cardealer/quicksearch.php:414
-#: views/shortcodes/cardealer/quicksearch.php:430
-#: views/shortcodes/cardealer/quicksearch.php:453
-#: views/shortcodes/cardealer/quicksearch.php:466
-#: views/shortcodes/cardealer/quicksearch.php:543
-msgid "Any"
-msgstr "Svi"
-
 #: views/shortcodes/cardealer/quicksearch.php:202
 msgid "Condition"
-msgstr ""
+msgstr "Stanje mašine"
 
 #: views/shortcodes/cardealer/quicksearch.php:208
 #, php-format
 msgid "Only %s cars"
-msgstr ""
+msgstr "Samo %s"
 
 #: views/shortcodes/cardealer/quicksearch.php:245
 msgid "Model"
 msgstr ""
 
-#: views/shortcodes/cardealer/quicksearch.php:256
-#: views/shortcodes/cardealer/quicksearch.php:355
-#: views/shortcodes/cardealer/quicksearch.php:481
-#: views/shortcodes/cardealer/quicksearch.php:559
-msgid "Search"
-msgstr ""
-
-#: views/shortcodes/cardealer/quicksearch.php:262
-#: views/shortcodes/cardealer/quicksearch.php:361
-#: views/shortcodes/cardealer/quicksearch.php:487
-msgid "Advanced"
-msgstr ""
-
 #: views/shortcodes/cardealer/quicksearch.php:278
 #: views/shortcodes/cardealer/quicksearch.php:284
 msgid "Price"
-msgstr ""
+msgstr "Cena"
 
 #: views/shortcodes/cardealer/quicksearch.php:278
 msgid "min"
-msgstr ""
+msgstr "od"
 
 #: views/shortcodes/cardealer/quicksearch.php:284
 msgid "max"
-msgstr ""
+msgstr "do"
 
 #: views/shortcodes/cardealer/quicksearch.php:298
 #: views/shortcodes/cardealer/quicksearch.php:315
 msgid "Year"
-msgstr ""
+msgstr "Godina"
 
 #: views/shortcodes/cardealer/quicksearch.php:298
 #: views/shortcodes/cardealer/quicksearch.php:340
 msgid "from"
-msgstr ""
+msgstr "od"
 
 #: views/shortcodes/cardealer/quicksearch.php:315
 #: views/shortcodes/cardealer/quicksearch.php:346
 msgid "to"
-msgstr ""
+msgstr "do"
 
 #: views/shortcodes/cardealer/quicksearch.php:340
 #: views/shortcodes/cardealer/quicksearch.php:346
 msgid "Mileage"
-msgstr ""
+msgstr "Broj radnih sati"
 
 #: views/shortcodes/cardealer/quicksearch.php:375
 msgid "Fuel Type"
-msgstr ""
+msgstr "Vrsta pogona"
 
 #: views/shortcodes/cardealer/quicksearch.php:392
 msgid "Gearbox"
-msgstr ""
+msgstr "Tip Prenosa"
 
 #: views/shortcodes/cardealer/quicksearch.php:411
 msgid "Body Type"
-msgstr ""
+msgstr "Tip"
 
 #: views/shortcodes/cardealer/quicksearch.php:428
 msgid "Door Count"
-msgstr ""
+msgstr "Visina dizanja (mm)"
 
 #: views/shortcodes/cardealer/quicksearch.php:451
 msgid "Interior Color"
-msgstr ""
+msgstr "Nosivost (kg)"
 
 #: views/shortcodes/cardealer/quicksearch.php:464
 msgid "Exterior Color"
-msgstr ""
+msgstr "Visina sklopljene mašine do"
 
 #: views/shortcodes/cardealer/recent_cars.php:91
 msgid "Show all cars"
@@ -2027,6 +1996,37 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://themeforest.net/user/ThemeMakers"
 msgstr ""
+
+#: views/shortcodes/cardealer/quicksearch.php:256
+#: views/shortcodes/cardealer/quicksearch.php:355
+#: views/shortcodes/cardealer/quicksearch.php:481
+#: views/shortcodes/cardealer/quicksearch.php:559
+msgid "Search"
+msgstr "Traži"
+
+#: views/shortcodes/cardealer/quicksearch.php:262
+#: views/shortcodes/cardealer/quicksearch.php:361
+#: views/shortcodes/cardealer/quicksearch.php:487
+msgid "Advanced"
+msgstr "Detalji"
+
+#: views/shortcodes/cardealer/quicksearch.php:137
+#: views/shortcodes/cardealer/quicksearch.php:171
+#: views/shortcodes/cardealer/quicksearch.php:180
+#: views/shortcodes/cardealer/quicksearch.php:204
+#: views/shortcodes/cardealer/quicksearch.php:239
+#: views/shortcodes/cardealer/quicksearch.php:247
+#: views/shortcodes/cardealer/quicksearch.php:301
+#: views/shortcodes/cardealer/quicksearch.php:318
+#: views/shortcodes/cardealer/quicksearch.php:378
+#: views/shortcodes/cardealer/quicksearch.php:395
+#: views/shortcodes/cardealer/quicksearch.php:414
+#: views/shortcodes/cardealer/quicksearch.php:430
+#: views/shortcodes/cardealer/quicksearch.php:453
+#: views/shortcodes/cardealer/quicksearch.php:466
+#: views/shortcodes/cardealer/quicksearch.php:543
+msgid "Any"
+msgstr "Svi"
 
 #: views/shortcodes/cardealer/quicksearch.php:237
 msgid "Make"

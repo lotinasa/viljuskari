@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cardealer\n"
 "POT-Creation-Date: 2016-11-20 14:55+0000\n"
-"PO-Revision-Date: 2020-06-06 14:47+0000\n"
+"PO-Revision-Date: 2020-06-07 18:24+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -35,14 +35,6 @@ msgstr ""
 
 #: content.php:62 single.php:21
 msgid "<b>Tags</b>"
-msgstr ""
-
-#: content.php:67 single.php:26 classes/custom_sidebars.php:142
-msgid "Categories"
-msgstr ""
-
-#: content.php:100
-msgid "comments"
 msgstr ""
 
 #: single-car.php:232 single.php:80
@@ -86,18 +78,6 @@ msgstr ""
 
 #. Name of the template
 msgid "Car Compare"
-msgstr ""
-
-#: template-car-compare.php:21
-msgid "Compare Listings"
-msgstr ""
-
-#: template-car-compare.php:26
-msgid "Prev"
-msgstr ""
-
-#: template-car-compare.php:27
-msgid "Next"
 msgstr ""
 
 #: template-car-compare.php:36 template-car-compare.php:123 article-car.php:234
@@ -167,10 +147,6 @@ msgstr ""
 msgid "Location on Map"
 msgstr ""
 
-#: template-car-user-dealer.php:164
-msgid "Latest dealers cars"
-msgstr "Poslednje dodati viljuškari "
-
 #. Name of the template
 msgid "-Theme Staff Page"
 msgstr ""
@@ -196,10 +172,6 @@ msgstr ""
 #. Name of the template
 msgid "Car Watch List"
 msgstr ""
-
-#: template-car-watch-list.php:33
-msgid "Ooops, You have not added any ad to your watch list yet!"
-msgstr "Ooops, Niste dodali nijedan oglas u listu želja!"
 
 #. Name of the template
 msgid "Login Page"
@@ -245,16 +217,8 @@ msgstr ""
 msgid "Car Listings"
 msgstr ""
 
-#: template-car-listing.php:283
-msgid "Post date"
-msgstr ""
-
 #: template-car-listing.php:348
 msgid "Sort by:"
-msgstr ""
-
-#: template-car-listing.php:367
-msgid "Items per page:"
 msgstr ""
 
 #: template-car-listing.php:501
@@ -264,14 +228,6 @@ msgstr ""
 #: article-car.php:201
 msgid "Your add is awaiting moderation."
 msgstr ""
-
-#: article-car.php:307 extensions/cardealer/classes/cardealer.php:364
-msgid "Compare"
-msgstr "Uporedi"
-
-#: article-car.php:315 extensions/cardealer/classes/cardealer.php:365
-msgid "Watch list"
-msgstr "Lista želja"
 
 #: functions.php:118
 msgid "Thememakers Default Sidebar"
@@ -317,22 +273,6 @@ msgstr ""
 msgid "Any"
 msgstr ""
 
-#: functions.php:371
-msgid "Selected car was successfully added to your compare list."
-msgstr "Izabrani viljuškar je uspešno dodat u listu za poređenje."
-
-#: functions.php:372
-msgid "Selected car was successfully removed from your compare list."
-msgstr "Izabrani viljuškar je uspešno uklonjen iz liste za poređenje."
-
-#: functions.php:373
-msgid "Selected car was successfully added to your watch list."
-msgstr ""
-
-#: functions.php:374
-msgid "Selected car was successfully removed from your watch list."
-msgstr ""
-
 #: functions.php:375 template-car-add-new.php:133
 #: extensions/cardealer/views/admin/car_attributes.php:197
 #: extensions/cardealer/views/admin/car_attributes.php:227
@@ -350,10 +290,6 @@ msgstr ""
 #: functions.php:378
 msgid "Car is unfeatured from now"
 msgstr ""
-
-#: functions.php:379 admin/options.php:207
-msgid "Please fill all required fields!"
-msgstr "Molimo Vas popunite sva obavezna polja"
 
 #: functions.php:380
 msgid "Wrong Username!"
@@ -417,10 +353,6 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: searchform.php:6 admin/theme_options/sections/tab_search/tab_search.php:38
-msgid "Search"
-msgstr ""
-
 #: sidebar-user-dealer.php:26 extensions/cardealer/widgets.php:443
 #: extensions/cardealer/views/admin/settings/sections/tab_front_slider/tab_front_slider.php:13
 msgid "Cars"
@@ -432,10 +364,6 @@ msgstr ""
 
 #. Name of the template
 msgid "Users Cars"
-msgstr ""
-
-#: template-car-user-cars.php:43
-msgid "Thank you! Your car was successfully added."
 msgstr ""
 
 #: template-car-user-cars.php:105
@@ -477,7 +405,7 @@ msgstr ""
 
 #: single.php:63
 msgid "About the Author"
-msgstr ""
+msgstr "O autoru"
 
 #: single.php:94
 msgid "Related Posts"
@@ -725,11 +653,6 @@ msgstr ""
 #: helper/helper.php:421 admin/views/widgets/timetable_form.php:124
 #: admin/views/widgets/timetable.php:70
 msgid "Sunday"
-msgstr ""
-
-#: helper/helper.php:422 admin/views/widgets/timetable_form.php:18
-#: admin/views/widgets/timetable.php:10
-msgid "Monday"
 msgstr ""
 
 #: helper/helper.php:423 admin/views/widgets/timetable_form.php:35
@@ -1229,10 +1152,6 @@ msgstr ""
 msgid "TMM Recent Cars"
 msgstr ""
 
-#: extensions/cardealer/widgets.php:67
-msgid "Recent Cars"
-msgstr ""
-
 #: extensions/cardealer/widgets.php:103
 msgid "Displays featured cars"
 msgstr ""
@@ -1281,10 +1200,6 @@ msgstr ""
 
 #: extensions/cardealer/widgets.php:261
 msgid "TMM Car Counter"
-msgstr ""
-
-#: extensions/cardealer/widgets.php:263
-msgid "Recently Added Cars"
 msgstr ""
 
 #: extensions/cardealer/widgets.php:302
@@ -1349,10 +1264,6 @@ msgstr ""
 
 #: extensions/cardealer/widgets.php:525
 msgid "Search by Car Body"
-msgstr ""
-
-#: extensions/cardealer/config.php:9
-msgid "Your car was successfully added"
 msgstr ""
 
 #: extensions/cardealer/config.php:10
@@ -2342,11 +2253,6 @@ msgstr ""
 msgid "Display \"View all\" button"
 msgstr ""
 
-#: admin/views/widgets/recent_posts.php:88
-#: admin/views/widgets/recent_posts.php:90
-msgid "See all posts"
-msgstr ""
-
 #: admin/views/widgets/contacts_bar_form.php:28
 msgid "Twitter Username"
 msgstr ""
@@ -2703,18 +2609,6 @@ msgstr ""
 
 #: extensions/cardealer/views/widgets/loan_calculator.php:47
 msgid "Calculate"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/car_counter.php:48
-msgid "within hour"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/car_counter.php:54
-msgid "within day"
-msgstr ""
-
-#: extensions/cardealer/views/widgets/car_counter.php:61
-msgid "added cars total"
 msgstr ""
 
 #: extensions/cardealer/views/widgets/car_counter_form.php:16
@@ -5102,10 +4996,6 @@ msgstr ""
 msgid "Large"
 msgstr ""
 
-#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:533
-msgid "Items per page"
-msgstr ""
-
 #: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:548
 msgid "Cars Archive page"
 msgstr ""
@@ -5444,6 +5334,116 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://themeforest.net/user/ThemeMakers"
 msgstr ""
+
+#: searchform.php:6 admin/theme_options/sections/tab_search/tab_search.php:38
+msgid "Search"
+msgstr ""
+
+#: content.php:67 single.php:26 classes/custom_sidebars.php:142
+msgid "Categories"
+msgstr "Kategorije"
+
+#: content.php:100
+msgid "comments"
+msgstr "komentara"
+
+#: template-car-listing.php:283
+msgid "Post date"
+msgstr "Datum objave"
+
+#: template-car-listing.php:367
+msgid "Items per page:"
+msgstr "Broj oglasa po strani:"
+
+#: helper/helper.php:422 admin/views/widgets/timetable_form.php:18
+#: admin/views/widgets/timetable.php:10
+msgid "Monday"
+msgstr "Ponedeljak"
+
+#: admin/views/widgets/recent_posts.php:88
+#: admin/views/widgets/recent_posts.php:90
+msgid "See all posts"
+msgstr "Pogledaj sve vesti"
+
+#: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:533
+msgid "Items per page"
+msgstr "Broj oglasa po strani"
+
+#: template-car-compare.php:21
+msgid "Compare Listings"
+msgstr "Lista za poređenje"
+
+#: template-car-compare.php:26
+msgid "Prev"
+msgstr "Prethodni"
+
+#: template-car-compare.php:27
+msgid "Next"
+msgstr "Sledeći"
+
+#: functions.php:373
+msgid "Selected car was successfully added to your watch list."
+msgstr "Izabrani viljuškar je uspešno dodat u listu želja."
+
+#: functions.php:374
+msgid "Selected car was successfully removed from your watch list."
+msgstr "Izabrani viljuškar je uspešno uklonjen iz liste želja."
+
+#: template-car-user-cars.php:43
+msgid "Thank you! Your car was successfully added."
+msgstr "Hvala Vam! Vaš viljuškar je uspešno dodat."
+
+#: extensions/cardealer/widgets.php:67
+msgid "Recent Cars"
+msgstr "Skorašnji viljuškari"
+
+#: extensions/cardealer/widgets.php:263
+msgid "Recently Added Cars"
+msgstr "Dodati viljuškari"
+
+#: extensions/cardealer/config.php:9
+msgid "Your car was successfully added"
+msgstr "Vaš viljuškar je uspešno dodat"
+
+#: extensions/cardealer/views/widgets/car_counter.php:48
+msgid "within hour"
+msgstr "u satu"
+
+#: extensions/cardealer/views/widgets/car_counter.php:54
+msgid "within day"
+msgstr "u danu"
+
+#: extensions/cardealer/views/widgets/car_counter.php:61
+msgid "added cars total"
+msgstr "ukupno"
+
+#: template-car-user-dealer.php:164
+msgid "Latest dealers cars"
+msgstr "Poslednje dodati viljuškari "
+
+#: template-car-watch-list.php:33
+msgid "Ooops, You have not added any ad to your watch list yet!"
+msgstr "Ooops, Niste dodali nijedan oglas u listu želja!"
+
+#: article-car.php:307 extensions/cardealer/classes/cardealer.php:364
+msgid "Compare"
+msgstr "Uporedi"
+
+#: article-car.php:315 extensions/cardealer/classes/cardealer.php:365
+msgid "Watch list"
+msgstr "Lista želja"
+
+#: functions.php:371
+msgid "Selected car was successfully added to your compare list."
+msgstr "Izabrani viljuškar je uspešno dodat u listu za poređenje."
+
+#: functions.php:372
+msgid "Selected car was successfully removed from your compare list."
+msgstr "Izabrani viljuškar je uspešno uklonjen iz liste za poređenje."
+
+#: functions.php:379 admin/options.php:207
+msgid "Please fill all required fields!"
+msgstr "Molimo Vas popunite sva obavezna polja"
 
 #: content.php:48 content-alternate.php:35 functions.php:473 single.php:15
 #: extensions/cardealer/classes/car.php:858

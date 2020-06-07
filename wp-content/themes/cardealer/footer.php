@@ -94,7 +94,7 @@ if ($count === 1) {
 			<div class="col-xs-12 adjective">
 				<p class="alignleft"><?php echo TMM::get_option("copyright_text") ?></p>
 				<p class="alignright"><?php _e('Developed by', 'cardealer'); ?>
-					<a target="_blank" href="http://webtemplatemasters.com">ThemeMakers</a>
+					<a target="_blank" href="http://">MeetingForce</a>
 				</p>
 			</div>
 		</div><!--/ .row-->

@@ -640,7 +640,8 @@ class TMM_Ext_PostType_Car {
                         if ($key > 0) {
                             $res .= ' / ';
                         }
-                        $res .= __($name, 'cardealer');
+//                        $res .= __($name, 'cardealer');
+                        $res = __($name, 'cardealer');
                     }
                 }
             }
