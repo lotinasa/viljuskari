@@ -17,7 +17,8 @@ $car_year_from       = 1900;
 $car_year_to         = date( "Y" ) + 1;
 $car_fuel_type       = "";
 $car_body            = "";
-$car_doors_count     = 0;
+$car_doors_count_from = 0;
+$car_doors_count_to  = 0;
 $car_interrior_color = "";
 $car_exterior_color  = "";
 $car_transmission    = "";
@@ -68,8 +69,12 @@ if ( isset( $_GET['car_body'] ) ) {
 	$car_body = $_GET['car_body'];
 }
 
-if ( isset( $_GET['car_doors_count'] ) ) {
-	$car_doors_count = intval( $_GET['car_doors_count'] );
+if ( isset( $_GET['car_doors_count_from'] ) ) {
+	$car_doors_count_from = intval( $_GET['car_doors_count_from'] );
+}
+
+if ( isset( $_GET['car_doors_count_to'] ) ) {
+    $car_doors_count_to = intval( $_GET['car_doors_count_to'] );
 }
 
 if ( isset( $_GET['car_interrior_color'] ) ) {
@@ -198,14 +203,20 @@ if ( ! empty( $car_exterior_color ) ) {
 	);
 }
 
-if ( ! empty( $car_doors_count ) ) {
-	$meta_query_array[] = array(
-		'key'     => 'car_doors_count',
-		'value'   => $car_doors_count,
-		'type'    => 'numeric',
-		'compare' => '='
-	);
+if ($car_doors_count_from > 0 || $car_doors_count_to > 0) {
+    if ($car_doors_count_to == 0) {
+        $car_doors_count_to = $car_doors_count_from;
+    }
+    if ( $car_doors_count_to >= $car_doors_count_from ) {
+        $meta_query_array[] = array(
+            'key' => 'car_doors_count',
+            'value' => array( $car_doors_count_from, $car_doors_count_to ),
+            'type' => 'numeric',
+            'compare' => 'BETWEEN'
+        );
+    }
 }
+
 
 if ( ! empty( $car_fuel_type ) ) {
 	$meta_query_array[] = array(

@@ -521,7 +521,8 @@ if ($user_post_count >= $options['max_cars'] AND ! user_can(get_current_user_id(
 													<?php endfor; ?>
 <!-- Sasa													<?php for ($i = TMM_Ext_PostType_Car::$car_options['min_doors_count']; $i <= TMM_Ext_PostType_Car::$car_options['max_doors_count']; $i++): ?>
 														<option value="<?php echo $i ?>"><?php echo $i ?></option>
-													<?php endfor; ?> -->
+													<?php endfor; ?>
+-->
 												</select>
 											</p>
 

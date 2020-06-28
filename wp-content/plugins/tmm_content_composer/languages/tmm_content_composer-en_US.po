@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ThemeMakers Visual Content Composer\n"
 "POT-Creation-Date: 2016-10-24 22:28+0200\n"
-"PO-Revision-Date: 2020-06-07 18:02+0000\n"
+"PO-Revision-Date: 2020-06-28 11:37+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -1084,75 +1084,9 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: views/shortcodes/cardealer/quicksearch.php:202
-msgid "Condition"
-msgstr "Stanje mašine"
-
-#: views/shortcodes/cardealer/quicksearch.php:208
-#, php-format
-msgid "Only %s cars"
-msgstr "Samo %s"
-
 #: views/shortcodes/cardealer/quicksearch.php:245
 msgid "Model"
 msgstr ""
-
-#: views/shortcodes/cardealer/quicksearch.php:278
-#: views/shortcodes/cardealer/quicksearch.php:284
-msgid "Price"
-msgstr "Cena"
-
-#: views/shortcodes/cardealer/quicksearch.php:278
-msgid "min"
-msgstr "od"
-
-#: views/shortcodes/cardealer/quicksearch.php:284
-msgid "max"
-msgstr "do"
-
-#: views/shortcodes/cardealer/quicksearch.php:298
-#: views/shortcodes/cardealer/quicksearch.php:315
-msgid "Year"
-msgstr "Godina"
-
-#: views/shortcodes/cardealer/quicksearch.php:298
-#: views/shortcodes/cardealer/quicksearch.php:340
-msgid "from"
-msgstr "od"
-
-#: views/shortcodes/cardealer/quicksearch.php:315
-#: views/shortcodes/cardealer/quicksearch.php:346
-msgid "to"
-msgstr "do"
-
-#: views/shortcodes/cardealer/quicksearch.php:340
-#: views/shortcodes/cardealer/quicksearch.php:346
-msgid "Mileage"
-msgstr "Broj radnih sati"
-
-#: views/shortcodes/cardealer/quicksearch.php:375
-msgid "Fuel Type"
-msgstr "Vrsta pogona"
-
-#: views/shortcodes/cardealer/quicksearch.php:392
-msgid "Gearbox"
-msgstr "Tip Prenosa"
-
-#: views/shortcodes/cardealer/quicksearch.php:411
-msgid "Body Type"
-msgstr "Tip"
-
-#: views/shortcodes/cardealer/quicksearch.php:428
-msgid "Door Count"
-msgstr "Visina dizanja (mm)"
-
-#: views/shortcodes/cardealer/quicksearch.php:451
-msgid "Interior Color"
-msgstr "Nosivost (kg)"
-
-#: views/shortcodes/cardealer/quicksearch.php:464
-msgid "Exterior Color"
-msgstr "Visina sklopljene mašine do"
 
 #: views/shortcodes/cardealer/recent_cars.php:91
 msgid "Show all cars"
@@ -1996,6 +1930,72 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://themeforest.net/user/ThemeMakers"
 msgstr ""
+
+#: views/shortcodes/cardealer/quicksearch.php:202
+msgid "Condition"
+msgstr "Stanje mašine"
+
+#: views/shortcodes/cardealer/quicksearch.php:208
+#, php-format
+msgid "Only %s cars"
+msgstr "Samo %s"
+
+#: views/shortcodes/cardealer/quicksearch.php:278
+#: views/shortcodes/cardealer/quicksearch.php:284
+msgid "Price"
+msgstr "Cena"
+
+#: views/shortcodes/cardealer/quicksearch.php:278
+msgid "min"
+msgstr "od"
+
+#: views/shortcodes/cardealer/quicksearch.php:284
+msgid "max"
+msgstr "do"
+
+#: views/shortcodes/cardealer/quicksearch.php:298
+#: views/shortcodes/cardealer/quicksearch.php:315
+msgid "Year"
+msgstr "Godina"
+
+#: views/shortcodes/cardealer/quicksearch.php:298
+#: views/shortcodes/cardealer/quicksearch.php:340
+msgid "from"
+msgstr "od"
+
+#: views/shortcodes/cardealer/quicksearch.php:315
+#: views/shortcodes/cardealer/quicksearch.php:346
+msgid "to"
+msgstr "do"
+
+#: views/shortcodes/cardealer/quicksearch.php:340
+#: views/shortcodes/cardealer/quicksearch.php:346
+msgid "Mileage"
+msgstr "Broj radnih sati"
+
+#: views/shortcodes/cardealer/quicksearch.php:375
+msgid "Fuel Type"
+msgstr "Vrsta pogona"
+
+#: views/shortcodes/cardealer/quicksearch.php:392
+msgid "Gearbox"
+msgstr "Tip Prenosa"
+
+#: views/shortcodes/cardealer/quicksearch.php:411
+msgid "Body Type"
+msgstr "Tip"
+
+#: views/shortcodes/cardealer/quicksearch.php:428
+msgid "Door Count"
+msgstr "Visina podiz."
+
+#: views/shortcodes/cardealer/quicksearch.php:451
+msgid "Interior Color"
+msgstr "Nosivost (kg)"
+
+#: views/shortcodes/cardealer/quicksearch.php:464
+msgid "Exterior Color"
+msgstr "Visina sklopljene mašine do"
 
 #: views/shortcodes/cardealer/quicksearch.php:256
 #: views/shortcodes/cardealer/quicksearch.php:355

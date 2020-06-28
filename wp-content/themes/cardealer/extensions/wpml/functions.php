@@ -64,7 +64,8 @@ if ( !function_exists('tmm_wpml_filter_link') ) {
 		$params[] = 'car_year_from';
 		$params[] = 'car_year_to';
 		$params[] = 'car_body';
-		$params[] = 'car_doors_count';
+		$params[] = 'car_doors_count_from';
+		$params[] = 'car_doors_count_to';
 		$params[] = 'car_interrior_color';
 		$params[] = 'car_exterior_color';
 		$params[] = 'car_transmission';
