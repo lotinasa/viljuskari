@@ -66,7 +66,8 @@ if ( !function_exists('tmm_wpml_filter_link') ) {
 		$params[] = 'car_body';
 		$params[] = 'car_doors_count_from';
 		$params[] = 'car_doors_count_to';
-		$params[] = 'car_interrior_color';
+		$params[] = 'car_interrior_color_from';
+		$params[] = 'car_interrior_color_to';
 		$params[] = 'car_exterior_color';
 		$params[] = 'car_transmission';
 		$params[] = 'car_fuel_type';

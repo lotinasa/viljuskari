@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cardealer\n"
 "POT-Creation-Date: 2016-11-20 14:55+0000\n"
-"PO-Revision-Date: 2020-06-07 18:24+0000\n"
+"PO-Revision-Date: 2020-06-28 15:13+0000\n"
 "Last-Translator: meetingforce <lotinasa@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en-US\n"
@@ -219,7 +219,7 @@ msgstr ""
 
 #: template-car-listing.php:348
 msgid "Sort by:"
-msgstr ""
+msgstr "Sortiranje:"
 
 #: template-car-listing.php:501
 msgid "NO RESULTS!"
@@ -403,10 +403,6 @@ msgstr ""
 msgid "Create Ad"
 msgstr ""
 
-#: single.php:63
-msgid "About the Author"
-msgstr "O autoru"
-
 #: single.php:94
 msgid "Related Posts"
 msgstr ""
@@ -512,7 +508,7 @@ msgstr ""
 
 #: content-header.php:89
 msgid "Search Results"
-msgstr ""
+msgstr "Rezultati pretrage"
 
 #: content-header.php:109
 #: extensions/cardealer/views/admin/settings/sections/tab_general/tab_general.php:488
@@ -5338,6 +5334,10 @@ msgstr ""
 #: searchform.php:6 admin/theme_options/sections/tab_search/tab_search.php:38
 msgid "Search"
 msgstr ""
+
+#: single.php:63
+msgid "About the Author"
+msgstr "O autoru"
 
 #: content.php:67 single.php:26 classes/custom_sidebars.php:142
 msgid "Categories"

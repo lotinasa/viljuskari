@@ -12,7 +12,8 @@ $car_fuel_type = '';
 $car_body = '';
 $car_doors_count_from = 0;
 $car_doors_count_to = 0;
-$car_interrior_color = '';
+$car_interrior_color_from = 0;
+$car_interrior_color_to = 0;
 $car_exterior_color = '';
 $car_mileage_from = 0;
 $car_mileage_to = 0;
@@ -88,10 +89,13 @@ if (isset($_GET['car_doors_count_to'])) {
     $car_doors_count_to = $_GET['car_doors_count_to'];
 }
 
-if (isset($_GET['car_interrior_color'])) {
-	$car_interrior_color = $_GET['car_interrior_color'];
+if (isset($_GET['car_interrior_color_from'])) {
+	$car_interrior_color_from = $_GET['car_interrior_color_from'];
 }
 
+if (isset($_GET['car_interrior_color_to'])) {
+    $car_interrior_color_to = $_GET['car_interrior_color_to'];
+}
 
 if (isset($_GET['car_exterior_color'])) {
 	$car_exterior_color = $_GET['car_exterior_color'];
@@ -139,7 +143,7 @@ $uniqid = uniqid();
 						<p>
 							<label for="tmm_qs_location0_<?php echo $uniqid; ?>"><?php _e($locations_captions_on_search_widget[0], TMM_CC_TEXTDOMAIN); ?>:</label>
 							<select id="tmm_qs_location0_<?php echo $uniqid; ?>" name="carlocation[0]" class="qs_carlocation0 carlocations" data-location0="<?php echo (int) $carlocation[0] ?>">
-								<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+								<option value="0"><?php _e("Nonei", cardealer) ?></option>
 							</select>
 						</p>
 					<?php } else if(!empty($show_location1) || !empty($show_location2)) { ?>
@@ -173,7 +177,7 @@ $uniqid = uniqid();
 								<p>
 									<label for="tmm_qs_location<?php echo $i.'_'.$uniqid; ?>"><?php _e($locations_captions_on_search_widget[$i], TMM_CC_TEXTDOMAIN); ?>:</label>
 									<select id="tmm_qs_location<?php echo $i.'_'.$uniqid; ?>" class="qs_carlocation<?php echo $i ?> carlocations" name="carlocation[<?php echo $i ?>]" data-level="<?php echo ($i ) ?>"<?php echo $data_attr ?>>
-										<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+										<option value="0"><?php _e("Nonei", cardealer) ?></option>
 									</select>
 								</p>
 
@@ -182,7 +186,7 @@ $uniqid = uniqid();
 								<p>
 									<label for="tmm_qs_location<?php echo $i.'_'.$uniqid; ?>"><?php _e(@$locations_captions_on_search_widget[$i], TMM_CC_TEXTDOMAIN); ?>:</label>
 									<select id="tmm_qs_location<?php echo $i.'_'.$uniqid; ?>" class="qs_carlocation<?php echo $i ?> carlocations" name="carlocation[<?php echo $i ?>]" disabled="" data-level="<?php echo $i ?>">
-										<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+										<option value="0"><?php _e("Nonei", cardealer) ?></option>
 									</select>
 								</p>
 
@@ -206,7 +210,7 @@ $uniqid = uniqid();
 						<p>
 							<label for="tmm_qs_condition_<?php echo $uniqid; ?>"><?php _e('Condition', TMM_CC_TEXTDOMAIN) ?>:</label>
 							<select id="tmm_qs_condition_<?php echo $uniqid; ?>" class="qs_condition" name="car_condition">
-								<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+								<option value="0"><?php _e("None", cardealer) ?></option>
 								<?php
 								foreach ($condition_list as $cond_id => $cond_name) {
 									echo '<option value="'.$cond_id.'"' . selected($car_condition, $cond_id, false) . '>'
@@ -241,7 +245,7 @@ $uniqid = uniqid();
 							<p>
 								<label for="tmm_qs_make_<?php echo $uniqid; ?>"><?php _e("Make", TMM_CC_TEXTDOMAIN) ?>:</label>
 								<select id="tmm_qs_make_<?php echo $uniqid; ?>" class="qs_carproducer" name="carproducer" data-make="<?php echo (int) $carproducer ?>" data-location="<?php echo (int) $carlocation[0] ?>" data-region="<?php echo (int) $_selected_region_id ?>" data-level="<?php echo (int) $_level ?>">
-									<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+									<option value="0"><?php _e("Nonei", cardealer) ?></option>
 								</select>
 							</p>
 						</div>
@@ -262,7 +266,7 @@ $uniqid = uniqid();
                                     <label for="tmm_qs_body_type_<?php echo $uniqid; ?>"><?php _e("Body Type", TMM_CC_TEXTDOMAIN) ?>:</label>
                                     <?php $carbodies = TMM_Ext_PostType_Car::$car_options['body']; ?>
                                     <select id="tmm_qs_body_type_<?php echo $uniqid; ?>" name="car_body">
-                                        <option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+                                        <option value="0"><?php _e("Nonei", cardealer) ?></option>
                                         <?php if (!empty($carbodies)) { ?>
                                             <?php foreach ($carbodies as $carbody_key => $carbody_name) { ?>
                                                 <option <?php selected($car_body, $carbody_key); ?> value="<?php echo $carbody_key ?>"><?php _e($carbody_name, TMM_CC_TEXTDOMAIN); ?></option>
@@ -286,7 +290,7 @@ $uniqid = uniqid();
                     <p>
                         <label for="tmm_qs_exterior_color_<?php echo $uniqid; ?>"><?php _e("Exterior Color", TMM_CC_TEXTDOMAIN) ?>:</label>
                         <select id="tmm_qs_exterior_color_<?php echo $uniqid; ?>" name="car_exterior_color">
-                            <option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+                            <option value="0"><?php _e("None", cardealer) ?></option>
                             <?php if (!empty($car_ext_colors)) { ?>
                                 <?php foreach ($car_ext_colors as $color => $color_name) { ?>
                                     <option <?php selected($car_exterior_color, $color); ?> value="<?php echo $color ?>"><?php _e($color_name, TMM_CC_TEXTDOMAIN); ?></option>
@@ -344,7 +348,7 @@ $uniqid = uniqid();
 									<label for="tmm_qs_year_from_<?php echo $uniqid; ?>"><?php _e("Year", TMM_CC_TEXTDOMAIN) ?> <span><?php _e("from", TMM_CC_TEXTDOMAIN) ?></span>:</label>
 									<?php
 									$now = (int) date("Y") + 1;
-									$years = array('any' => __("Any", TMM_CC_TEXTDOMAIN));
+									$years = array('any' => __("None", cardealer));
 									for ($i = $now; $i >= 1900; $i--) {
 										$years[$i] = $i;
 									}
@@ -361,7 +365,7 @@ $uniqid = uniqid();
 									<label for="tmm_qs_year_to_<?php echo $uniqid; ?>"><?php _e("Year", TMM_CC_TEXTDOMAIN) ?> <span><?php _e("to", TMM_CC_TEXTDOMAIN) ?></span>:</label>
 									<?php
 									$now = (int) date("Y") + 1;
-									$years = array('any' => __("Any", TMM_CC_TEXTDOMAIN));
+									$years = array('any' => __("None", cardealer));
 									for ($i = $now; $i >= 1900; $i--) {
 										$years[$i] = $i;
 									}
@@ -421,7 +425,7 @@ $uniqid = uniqid();
 								<label for="tmm_qs_fuel_type_<?php echo $uniqid; ?>"><?php _e("Fuel Type", TMM_CC_TEXTDOMAIN) ?>:</label>
 								<?php $fuel_types = TMM_Ext_PostType_Car::$car_options['fuel_type']; ?>
 								<select id="tmm_qs_fuel_type_<?php echo $uniqid; ?>" name="car_fuel_type">
-									<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+									<option value="0"><?php _e("Nonei", cardealer) ?></option>
 									<?php if (!empty($fuel_types)) { ?>
 										<?php foreach ($fuel_types as $fuel_type => $fuel_type_name) { ?>
 											<option <?php selected($car_fuel_type, $fuel_type); ?> value="<?php echo $fuel_type ?>"><?php _e($fuel_type_name, TMM_CC_TEXTDOMAIN); ?></option>
@@ -438,7 +442,7 @@ $uniqid = uniqid();
 								<label for="tmm_qs_gearbox_<?php echo $uniqid; ?>"><?php _e("Gearbox", TMM_CC_TEXTDOMAIN) ?>:</label>
 								<?php $car_transmissions = TMM_Ext_PostType_Car::$car_options['transmission']; ?>
 								<select id="tmm_qs_gearbox_<?php echo $uniqid; ?>" name="car_transmission">
-									<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+									<option value="0"><?php _e("Nonei", cardealer) ?></option>
 									<?php if (!empty($car_transmissions)) { ?>
 										<?php foreach ($car_transmissions as $transmission => $transmission_name) { ?>
 											<option <?php selected($car_transmission, $transmission); ?> value="<?php echo $transmission ?>"><?php _e($transmission_name, TMM_CC_TEXTDOMAIN); ?></option>
@@ -506,36 +510,47 @@ $uniqid = uniqid();
                     </div>
                 </fieldset>
 
-				<!-- Exterior/Interior Colors-->
-				<?php if(!empty($show_colors)) { ?>
+				<!-- Interior Color range-->
+                <fieldset>
+				    <?php if(!empty($show_colors)) { ?>
 
 					<?php
 					$car_int_colors = TMM_Ext_PostType_Car::$car_options['interior_color'];
-					$car_ext_colors = TMM_Ext_PostType_Car::$car_options['exterior_color'];
 					?>
 
 					<div class="row">
 						<div class="col-xs-6">
+                            <!-- Interior Color from-->
 							<p>
-								<label for="tmm_qs_interrior_color_<?php echo $uniqid; ?>"><?php _e("Interior Color", TMM_CC_TEXTDOMAIN) ?></label>
-								<select id="tmm_qs_interrior_color_<?php echo $uniqid; ?>" name="car_interrior_color">
-									<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+								<label for="tmm_qs_interrior_color_<?php echo $uniqid; ?>"><?php _e("Interior Color", TMM_CC_TEXTDOMAIN) ?><span> <?php _e("min", TMM_CC_TEXTDOMAIN) ?></span>:</label>
+								<select id="tmm_qs_interrior_color_<?php echo $uniqid; ?>" name="car_interrior_color_from">
+									<option value="0"><?php _e("None", cardealer) ?></option>
 									<?php if (!empty($car_int_colors)) { ?>
 										<?php foreach ($car_int_colors as $color => $color_name) { ?>
-											<option <?php selected($car_interrior_color, $color); ?> value="<?php echo $color ?>"><?php _e($color_name, TMM_CC_TEXTDOMAIN); ?></option>
+											<option <?php selected($car_interrior_color_from, $color); ?> value="<?php echo $color ?>"><?php _e($color_name, TMM_CC_TEXTDOMAIN); ?></option>
 										<?php } ?>
 									<?php } ?>
 								</select>
 							</p>
 						</div>
 						<div class="col-xs-6">
-							<p>
-
-							</p>
+                            <!-- Interior Color to-->
+                            <p>
+                                <label for="tmm_qs_interrior_color_<?php echo $uniqid; ?>"><?php _e("Interior Color", TMM_CC_TEXTDOMAIN) ?><span> <?php _e("max", TMM_CC_TEXTDOMAIN) ?></span>:</label>
+                                <select id="tmm_qs_interrior_color_<?php echo $uniqid; ?>" name="car_interrior_color_to">
+                                    <option value="0"><?php _e("None", cardealer) ?></option>
+                                    <?php if (!empty($car_int_colors)) { ?>
+                                        <?php foreach ($car_int_colors as $color => $color_name) { ?>
+                                            <option <?php selected($car_interrior_color_to, $color); ?> value="<?php echo $color ?>"><?php _e($color_name, TMM_CC_TEXTDOMAIN); ?></option>
+                                        <?php } ?>
+                                    <?php } ?>
+                                </select>
+                            </p>
 						</div>
 					</div>
 
 				<?php } ?>
+                </fieldset>
 
 				<?php if ($button_position == 3 || !empty($show_in_one_col) ) { ?>
 
@@ -601,7 +616,7 @@ $uniqid = uniqid();
 								</label>
 
 								<select id="<?php echo $key.'_'.$uniqid; ?>" name="advanced[<?php echo $specification_key ?>][<?php echo $key ?>]">
-									<option value="0"><?php _e("Any", TMM_CC_TEXTDOMAIN) ?></option>
+									<option value="0"><?php _e("Nonei", cardealer) ?></option>
 									<?php foreach ($value['values'] as $val_key => $val_name) { ?>
 										<option <?php if (isset($adv_params['advanced'][$specification_key][$key]) && $adv_params['advanced'][$specification_key][$key] == $val_key) { ?>selected<?php } ?> value="<?php echo $val_key ?>"><?php _e($val_name, TMM_CC_TEXTDOMAIN); ?></option>
 									<?php } ?>
